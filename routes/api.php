@@ -13,14 +13,12 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::get('/users', function() {
-    return response()->json(App\UsersInfo::all(), 200);
-});
-
-Route::get('/users/{id}', function($id) {
-    return response()->json(App\UsersInfo::find($id), 200);
-});
+Route::get('/users', 'UsersInfoController@getUserList');
+Route::get('/users/{id}', 'UsersInfoController@getUserById');
+Route::post('/users', 'UsersInfoController@addUser');
+Route::put('/users/{id}', 'UsersInfoController@updateUser');
+Route::delete('/users/{id}', 'UsersInfoController@deleteUser');

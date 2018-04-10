@@ -16,4 +16,6 @@
 
 const { mix } = require('laravel-mix');
 mix.js('resources/assets/js/hello.js', 'public/js')
-   .extract(['lodash', 'jquery', 'axios', 'vue']);;
+   .js('resources/assets/js/usersInfo.js', 'public/js')
+   .extract(['lodash', 'jquery', 'axios', 'vue'])
+   .sass('resources/assets/sass/app.scss', 'public/css');
