@@ -112,6 +112,7 @@ export default {
             axios.delete('/api/users/' + id)
                 .then(response => {
                     if (response.data['ok']) {
+                        console.log(id);
                         self.init();
                         self.isSave = false;
                         self.user = {id: null, name: '', phone: ''};

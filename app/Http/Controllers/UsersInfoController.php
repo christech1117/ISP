@@ -14,7 +14,8 @@ class UsersInfoController extends Controller
 
     function getUserList()
     {
-        return response()->json(UsersInfo::all(), 200);
+        // return response()->json(UsersInfo::all(), 200);
+        return UsersInfo::where('is_del', '=', 0)->get();
     }
     
     function getUserById($id)

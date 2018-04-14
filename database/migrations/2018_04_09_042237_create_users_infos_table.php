@@ -20,7 +20,7 @@ class CreateUsersInfosTable extends Migration
             $table->string('avatar')->nullable(); // 照片
             $table->date('work_start_date')->nullable(); // 就職日期
             $table->date('work_end_date')->nullable(); // 離職日期
-            $table->enum('work_status', ['1', '0'])->default('1'); // 工作狀態
+            $table->boolean('work_status')->default(true); // 工作狀態
             $table->string('phone')->nullable(); // 電話
             $table->string('email')->nullable(); // E-mail
             $table->string('adress')->nullable(); // 聯絡住址
@@ -31,7 +31,7 @@ class CreateUsersInfosTable extends Migration
             $table->string('role')->nullable(); // 角色
             $table->string('approve_status')->nullable(); // 審核
             $table->enum('income', ['no', 'look', 'edit'])->nullable(); // 個人收入
-            $table->enum('is_del', ['1', '0'])->default('0'); // 是否刪除
+            $table->boolean('is_del')->default(false); // 是否刪除
             $table->timestamps();
         });
     }

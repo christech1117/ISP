@@ -1,6 +1,6 @@
-webpackJsonp([3],{
-
-/***/ 1:
+webpackJsonp([1],[
+/* 0 */,
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2529,326 +2529,9 @@ Popper.Defaults = Defaults;
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
 
 /***/ }),
-
-/***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(24);
-
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__);
-__webpack_require__(5);
-
-
-var app = new Vue({
-    el: '#app',
-    components: { SideBar: __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default.a }
-});
-
-/***/ }),
-
-/***/ 4:
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
-
-
-/***/ }),
-
-/***/ 46:
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(69)
-}
-var normalizeComponent = __webpack_require__(9)
-/* script */
-var __vue_script__ = __webpack_require__(49)
-/* template */
-var __vue_template__ = __webpack_require__(71)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-4badc1cf"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/layouts/SideBar.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4badc1cf", Component.options)
-  } else {
-    hotAPI.reload("data-v-4badc1cf", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-
-/***/ 49:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-
-/***/ 5:
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -2864,7 +2547,7 @@ window.Vue = __webpack_require__(11);
 try {
   window.$ = window.jQuery = __webpack_require__(3);
 
-  __webpack_require__(6);
+  __webpack_require__(5);
 } catch (e) {}
 
 /**
@@ -2909,8 +2592,7 @@ if (token) {
 // });
 
 /***/ }),
-
-/***/ 6:
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -6810,35 +6492,89 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 
 /***/ }),
+/* 6 */
+/***/ (function(module, exports) {
 
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
 
-// load the styles
-var content = __webpack_require__(70);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("2372006d", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
 }
 
-/***/ }),
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
-/***/ 7:
+	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -7066,328 +6802,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-
-/***/ 70:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.nav-side-menu[data-v-4badc1cf] {\n  font-size: 13px;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n.nav-side-menu .brand[data-v-4badc1cf] {\n  background-color: #23282e;\n  line-height: 50px;\n  display: block;\n  text-align: center;\n  font-size: 14px;\n}\n.nav-side-menu .toggle-btn[data-v-4badc1cf] {\n  display: none;\n}\n.nav-side-menu ul[data-v-4badc1cf],\n.nav-side-menu li[data-v-4badc1cf] {\n  list-style: none;\n  padding: 0px;\n  margin: 0px;\n  line-height: 35px;\n  cursor: pointer;\n  /*    \n    .collapsed{\n       .arrow:before{\n                 font-family: FontAwesome;\n                 content: \"\\f053\";\n                 display: inline-block;\n                 padding-left:10px;\n                 padding-right: 10px;\n                 vertical-align: middle;\n                 float:right;\n            }\n     }\n*/\n}\n.nav-side-menu ul :not(collapsed) .arrow[data-v-4badc1cf]:before,\n.nav-side-menu li :not(collapsed) .arrow[data-v-4badc1cf]:before {\n  font-family: FontAwesome;\n  content: \"\\F078\";\n  display: inline-block;\n  padding-left: 10px;\n  padding-right: 10px;\n  vertical-align: middle;\n  float: right;\n}\n.nav-side-menu ul .active[data-v-4badc1cf],\n.nav-side-menu li .active[data-v-4badc1cf] {\n  border-left: 3px solid #d19b3d;\n  background-color: #4f5b69;\n}\n.nav-side-menu ul .sub-menu li.active[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li.active[data-v-4badc1cf] {\n  color: #d19b3d;\n}\n.nav-side-menu ul .sub-menu li.active a[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li.active a[data-v-4badc1cf] {\n  color: #d19b3d;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li[data-v-4badc1cf] {\n  background-color: #181c20;\n  border: none;\n  line-height: 28px;\n  border-bottom: 1px solid #23282e;\n  margin-left: 0px;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf]:hover,\n.nav-side-menu li .sub-menu li[data-v-4badc1cf]:hover {\n  background-color: #020203;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf]:before,\n.nav-side-menu li .sub-menu li[data-v-4badc1cf]:before {\n  font-family: FontAwesome;\n  /* content: \"\\f105\"; */\n  display: inline-block;\n  padding-left: 10px;\n  padding-right: 10px;\n  vertical-align: middle;\n}\n.nav-side-menu li[data-v-4badc1cf] {\n  padding-left: 0px;\n  border-left: 3px solid #2e353d;\n  border-bottom: 1px solid #23282e;\n}\n.nav-side-menu li a[data-v-4badc1cf] {\n  text-decoration: none;\n  color: #e1ffff;\n}\n.nav-side-menu li a i[data-v-4badc1cf] {\n  padding-left: 10px;\n  width: 20px;\n  padding-right: 20px;\n}\n.nav-side-menu li[data-v-4badc1cf]:hover {\n  border-left: 3px solid #d19b3d;\n  background-color: #4f5b69;\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@media (max-width: 767px) {\n.nav-side-menu[data-v-4badc1cf] {\n    position: relative;\n    width: 100%;\n    margin-bottom: 10px;\n}\n.nav-side-menu .toggle-btn[data-v-4badc1cf] {\n    display: block;\n    cursor: pointer;\n    position: absolute;\n    right: 10px;\n    top: 10px;\n    z-index: 10 !important;\n    padding: 3px;\n    background-color: #ffffff;\n    color: #000;\n    width: 40px;\n    text-align: center;\n}\n.brand[data-v-4badc1cf] {\n    text-align: left !important;\n    font-size: 22px;\n    padding-left: 20px;\n    line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n.nav-side-menu .menu-list .menu-content[data-v-4badc1cf] {\n    display: block;\n}\n}\nbody[data-v-4badc1cf] {\n  margin: 0px;\n  padding: 0px;\n}\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 71:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "nav-side-menu" }, [
-      _c("div", { staticClass: "brand" }, [_vm._v("Brand Logo")]),
-      _c("i", {
-        staticClass: "fa fa-barsfa-2x toggle-btn",
-        attrs: { "data-toggle": "collapse", "data-target": "#menu-content" }
-      }),
-      _c("div", { staticClass: "menu-list" }, [
-        _c(
-          "ul",
-          {
-            staticClass: "menu-content collapse out",
-            attrs: { id: "menu-content" }
-          },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-globe fa-lg" }),
-                _vm._v(" 總覽")
-              ])
-            ]),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed active",
-                attrs: { "data-toggle": "collapse", "data-target": "#products" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-sitemap fa-lg" }),
-                      _vm._v(" 組織層級")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "products" } },
-              [
-                _c("li", { staticClass: "active" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v(" 組織基本資料")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("人員管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("部門\\單位管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("方案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("檔案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("組織效益效率量表(OEES)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("發展及改善計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#service" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fa fa-users fa-lg" }),
-                      _vm._v(" 團隊層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "service" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("團隊管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人與團隊特質量表(CFI)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("發展計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#new" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-user fa-lg" }),
-                      _vm._v(" 個人層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "new" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("基本資料")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("支持強度量表")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("我的支持計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個別化支持計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("ISP會議記錄")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人成果量表(POS)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("社區生活技能評量表")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#work" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-briefcase fa-lg" }),
-                      _vm._v(" 工作管理 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "work" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("組織層級")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("團隊層級")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人層級")
-                  ])
-                ])
-              ]
-            ),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-question-circle fa-lg" }),
-                _vm._v(" HELP")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4badc1cf", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 8:
+/* 8 */
 /***/ (function(module, exports) {
 
 /**
@@ -7420,8 +6835,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-
-/***/ 9:
+/* 9 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -7529,6 +6943,283 @@ module.exports = function normalizeComponent (
 }
 
 
-/***/ })
+/***/ }),
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
 
-},[23]);
+__webpack_require__(21);
+module.exports = __webpack_require__(48);
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_NavBar__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_NavBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_layouts_NavBar__);
+__webpack_require__(4);
+
+
+new Vue({
+    el: '#app',
+    components: { NavBar: __WEBPACK_IMPORTED_MODULE_0__components_layouts_NavBar___default.a }
+});
+
+/***/ }),
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(44)
+}
+var normalizeComponent = __webpack_require__(9)
+/* script */
+var __vue_script__ = __webpack_require__(46)
+/* template */
+var __vue_template__ = __webpack_require__(47)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/layouts/NavBar.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-1cbfb92d", Component.options)
+  } else {
+    hotAPI.reload("data-v-1cbfb92d", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(45);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("4233638d", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1cbfb92d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NavBar.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-1cbfb92d\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./NavBar.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(6)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c(
+        "nav",
+        { staticClass: "navbar navbar-expand-lg navbar-light bg-light" },
+        [
+          _c("a", { staticClass: "navbar-brand", attrs: { href: "#" } }, [
+            _vm._v("Navbar")
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "navbar-toggler",
+              attrs: {
+                type: "button",
+                "data-toggle": "collapse",
+                "data-target": "#navbarNavAltMarkup",
+                "aria-controls": "navbarNavAltMarkup",
+                "aria-expanded": "false",
+                "aria-label": "Toggle navigation"
+              }
+            },
+            [_c("span", { staticClass: "navbar-toggler-icon" })]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse",
+              attrs: { id: "navbarNavAltMarkup" }
+            },
+            [
+              _c("div", { staticClass: "navbar-nav" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-item nav-link active",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _vm._v("Home "),
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("(current)")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "nav-item nav-link", attrs: { href: "#" } },
+                  [_vm._v("Features")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "nav-item nav-link", attrs: { href: "#" } },
+                  [_vm._v("Pricing")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass: "nav-item nav-link disabled",
+                    attrs: { href: "#" }
+                  },
+                  [_vm._v("Disabled")]
+                )
+              ])
+            ]
+          )
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-1cbfb92d", module.exports)
+  }
+}
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ })
+],[20]);
