@@ -2548,6 +2548,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __webpack_require__(5);
 
 
+FontAwesomeConfig = { searchPseudoElements: true };
 var app = new Vue({
     el: '#app',
     components: { SideBar: __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default.a }
@@ -2644,13 +2645,13 @@ function toComment(sourceMap) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(69)
+  __webpack_require__(47)
 }
 var normalizeComponent = __webpack_require__(9)
 /* script */
 var __vue_script__ = __webpack_require__(49)
 /* template */
-var __vue_template__ = __webpack_require__(71)
+var __vue_template__ = __webpack_require__(50)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -2690,36 +2691,53 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ 47:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(48);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("5e2c69c2", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 48:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n#side-bar *[data-v-4badc1cf], #side-bar body[data-v-4badc1cf] {\n    font-size: 14px;\n    margin: 0px;\n    padding: 0px;\n}\n#side-bar .brand[data-v-4badc1cf] {\n    background-color: #23282e;\n    line-height: 50px;\n    display: block;\n    text-align: center;\n    font-size: 14px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n    display: none;\n}\n#side-bar ul[data-v-4badc1cf], #side-bar li[data-v-4badc1cf] {\n    list-style: none;\n    line-height: 25px;\n    cursor: pointer;\n}\n#side-bar ul .active[data-v-4badc1cf], #side-bar li .active[data-v-4badc1cf] {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf], #side-bar li .sub-menu li[data-v-4badc1cf] {\n      background-color: #181c20;\n      border: none;\n      line-height: 20px;\n      border-bottom: 1px solid #23282e;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:hover, #side-bar li .sub-menu li[data-v-4badc1cf]:hover {\n        background-color: #020203;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:before, #side-bar li .sub-menu li[data-v-4badc1cf]:before {\n        font-family: \"Font Awesome 5 Free\";\n        content: \"\\F105\";\n        font-weight: 900;\n        padding: 0 10px;\n        vertical-align: middle;\n}\n#side-bar ul .sub-menu li .active[data-v-4badc1cf], #side-bar li .sub-menu li .active[data-v-4badc1cf] {\n        color: #d19b3d;\n        color: #d19b3d;\n}\n#side-bar li[data-v-4badc1cf] {\n    padding: 10px;\n    border-left: 3px solid #2e353d;\n    border-bottom: 1px solid #23282e;\n}\n#side-bar li[data-v-4badc1cf]:hover {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n#side-bar li a[data-v-4badc1cf] {\n      text-decoration: none;\n      color: #e1ffff;\n}\n#side-bar li a i[data-v-4badc1cf] {\n        padding-left: 10px;\n        width: 20px;\n        padding-right: 20px;\n}\n@media (max-width: 767px) {\n#side-bar[data-v-4badc1cf] {\n      position: relative;\n      width: 100%;\n      margin-bottom: 10px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n        display: block;\n        cursor: pointer;\n        position: absolute;\n        right: 10px;\n        top: 10px;\n        z-index: 10 !important;\n        padding: 3px;\n        background-color: #ffffff;\n        color: #000;\n        width: 40px;\n        text-align: center;\n}\n#side-bar .brand[data-v-4badc1cf] {\n        text-align: left !important;\n        font-size: 22px;\n        padding-left: 20px;\n        line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n#side-bar .menu-list .menu-content[data-v-4badc1cf] {\n      display: block;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2907,6 +2925,249 @@ if (token) {
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ 50:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { attrs: { id: "side-bar" } }, [
+      _c("div", { staticClass: "brand" }, [_vm._v("Brand Logo")]),
+      _c("div", { staticClass: "menu-list" }, [
+        _c(
+          "ul",
+          {
+            staticClass: "menu-content collapse out fa-ul",
+            attrs: { id: "menu-content" }
+          },
+          [
+            _c("li", { staticClass: "active" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fas fa-globe fa-lg" }),
+                _vm._v(" 總覽")
+              ])
+            ]),
+            _c(
+              "li",
+              {
+                staticClass: "collapsed",
+                attrs: { "data-toggle": "collapse", "data-target": "#products" }
+              },
+              [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col" }, [
+                      _c("i", { staticClass: "fas fa-sitemap fa-lg" }),
+                      _vm._v(" 組織層級")
+                    ]),
+                    _c("div", { staticClass: "col text-right" }, [
+                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _c(
+              "ul",
+              { staticClass: "sub-menu collapse", attrs: { id: "products" } },
+              [
+                _c("li", { staticClass: "active" }, [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v(" 組織基本資料")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("人員管理")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("部門\\單位管理")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("方案管理")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("檔案管理")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("組織效益效率量表(OEES)")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("發展及改善計畫")
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }),
+                  _vm._v("統計分析")
+                ])
+              ]
+            ),
+            _c(
+              "li",
+              {
+                staticClass: "collapsed",
+                attrs: { "data-toggle": "collapse", "data-target": "#service" }
+              },
+              [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col" }, [
+                      _c("i", { staticClass: "fa fa-users fa-lg" }),
+                      _vm._v(" 團隊層級 ")
+                    ]),
+                    _c("div", { staticClass: "col text-right" }, [
+                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _c(
+              "ul",
+              { staticClass: "sub-menu collapse", attrs: { id: "service" } },
+              [
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("團隊管理")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("個人與團隊特質量表(CFI)")
+                  ])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("發展計畫")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("統計分析")])
+                ])
+              ]
+            ),
+            _c(
+              "li",
+              {
+                staticClass: "collapsed",
+                attrs: { "data-toggle": "collapse", "data-target": "#new" }
+              },
+              [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col" }, [
+                      _c("i", { staticClass: "fas fa-user fa-lg" }),
+                      _vm._v(" 個人層級 ")
+                    ]),
+                    _c("div", { staticClass: "col text-right" }, [
+                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _c(
+              "ul",
+              { staticClass: "sub-menu collapse", attrs: { id: "new" } },
+              [
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("個案管理")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("基本資料")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("支持強度量表")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("我的支持計畫")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("個別化支持計畫")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("ISP會議記錄")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("個人成果量表(POS)")
+                  ])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _vm._v("社區生活技能評量表")
+                  ])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("統計分析")])
+                ])
+              ]
+            ),
+            _c(
+              "li",
+              {
+                staticClass: "collapsed",
+                attrs: { "data-toggle": "collapse", "data-target": "#work" }
+              },
+              [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col" }, [
+                      _c("i", { staticClass: "fas fa-briefcase fa-lg" }),
+                      _vm._v(" 工作管理 ")
+                    ]),
+                    _c("div", { staticClass: "col text-right" }, [
+                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
+                    ])
+                  ])
+                ])
+              ]
+            ),
+            _c(
+              "ul",
+              { staticClass: "sub-menu collapse", attrs: { id: "work" } },
+              [
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("組織層級")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("團隊層級")])
+                ]),
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [_vm._v("個人層級")])
+                ])
+              ]
+            ),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "fas fa-question-circle fa-lg" }),
+                _vm._v(" HELP")
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4badc1cf", module.exports)
+  }
+}
 
 /***/ }),
 
@@ -6811,33 +7072,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ }),
 
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(70);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("2372006d", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-
 /***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -7064,326 +7298,6 @@ function applyToTag (styleElement, obj) {
   }
 }
 
-
-/***/ }),
-
-/***/ 70:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.nav-side-menu[data-v-4badc1cf] {\n  font-size: 13px;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n.nav-side-menu .brand[data-v-4badc1cf] {\n  background-color: #23282e;\n  line-height: 50px;\n  display: block;\n  text-align: center;\n  font-size: 14px;\n}\n.nav-side-menu .toggle-btn[data-v-4badc1cf] {\n  display: none;\n}\n.nav-side-menu ul[data-v-4badc1cf],\n.nav-side-menu li[data-v-4badc1cf] {\n  list-style: none;\n  padding: 0px;\n  margin: 0px;\n  line-height: 35px;\n  cursor: pointer;\n  /*    \n    .collapsed{\n       .arrow:before{\n                 font-family: FontAwesome;\n                 content: \"\\f053\";\n                 display: inline-block;\n                 padding-left:10px;\n                 padding-right: 10px;\n                 vertical-align: middle;\n                 float:right;\n            }\n     }\n*/\n}\n.nav-side-menu ul :not(collapsed) .arrow[data-v-4badc1cf]:before,\n.nav-side-menu li :not(collapsed) .arrow[data-v-4badc1cf]:before {\n  font-family: FontAwesome;\n  content: \"\\F078\";\n  display: inline-block;\n  padding-left: 10px;\n  padding-right: 10px;\n  vertical-align: middle;\n  float: right;\n}\n.nav-side-menu ul .active[data-v-4badc1cf],\n.nav-side-menu li .active[data-v-4badc1cf] {\n  border-left: 3px solid #d19b3d;\n  background-color: #4f5b69;\n}\n.nav-side-menu ul .sub-menu li.active[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li.active[data-v-4badc1cf] {\n  color: #d19b3d;\n}\n.nav-side-menu ul .sub-menu li.active a[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li.active a[data-v-4badc1cf] {\n  color: #d19b3d;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf],\n.nav-side-menu li .sub-menu li[data-v-4badc1cf] {\n  background-color: #181c20;\n  border: none;\n  line-height: 28px;\n  border-bottom: 1px solid #23282e;\n  margin-left: 0px;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf]:hover,\n.nav-side-menu li .sub-menu li[data-v-4badc1cf]:hover {\n  background-color: #020203;\n}\n.nav-side-menu ul .sub-menu li[data-v-4badc1cf]:before,\n.nav-side-menu li .sub-menu li[data-v-4badc1cf]:before {\n  font-family: FontAwesome;\n  /* content: \"\\f105\"; */\n  display: inline-block;\n  padding-left: 10px;\n  padding-right: 10px;\n  vertical-align: middle;\n}\n.nav-side-menu li[data-v-4badc1cf] {\n  padding-left: 0px;\n  border-left: 3px solid #2e353d;\n  border-bottom: 1px solid #23282e;\n}\n.nav-side-menu li a[data-v-4badc1cf] {\n  text-decoration: none;\n  color: #e1ffff;\n}\n.nav-side-menu li a i[data-v-4badc1cf] {\n  padding-left: 10px;\n  width: 20px;\n  padding-right: 20px;\n}\n.nav-side-menu li[data-v-4badc1cf]:hover {\n  border-left: 3px solid #d19b3d;\n  background-color: #4f5b69;\n  -webkit-transition: all 1s ease;\n  transition: all 1s ease;\n}\n@media (max-width: 767px) {\n.nav-side-menu[data-v-4badc1cf] {\n    position: relative;\n    width: 100%;\n    margin-bottom: 10px;\n}\n.nav-side-menu .toggle-btn[data-v-4badc1cf] {\n    display: block;\n    cursor: pointer;\n    position: absolute;\n    right: 10px;\n    top: 10px;\n    z-index: 10 !important;\n    padding: 3px;\n    background-color: #ffffff;\n    color: #000;\n    width: 40px;\n    text-align: center;\n}\n.brand[data-v-4badc1cf] {\n    text-align: left !important;\n    font-size: 22px;\n    padding-left: 20px;\n    line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n.nav-side-menu .menu-list .menu-content[data-v-4badc1cf] {\n    display: block;\n}\n}\nbody[data-v-4badc1cf] {\n  margin: 0px;\n  padding: 0px;\n}\n\n", ""]);
-
-// exports
-
-
-/***/ }),
-
-/***/ 71:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "nav-side-menu" }, [
-      _c("div", { staticClass: "brand" }, [_vm._v("Brand Logo")]),
-      _c("i", {
-        staticClass: "fa fa-barsfa-2x toggle-btn",
-        attrs: { "data-toggle": "collapse", "data-target": "#menu-content" }
-      }),
-      _c("div", { staticClass: "menu-list" }, [
-        _c(
-          "ul",
-          {
-            staticClass: "menu-content collapse out",
-            attrs: { id: "menu-content" }
-          },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-globe fa-lg" }),
-                _vm._v(" 總覽")
-              ])
-            ]),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed active",
-                attrs: { "data-toggle": "collapse", "data-target": "#products" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-sitemap fa-lg" }),
-                      _vm._v(" 組織層級")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "products" } },
-              [
-                _c("li", { staticClass: "active" }, [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v(" 組織基本資料")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("人員管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("部門\\單位管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("方案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("檔案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("組織效益效率量表(OEES)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("發展及改善計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#service" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fa fa-users fa-lg" }),
-                      _vm._v(" 團隊層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "service" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("團隊管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人與團隊特質量表(CFI)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("發展計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#new" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-user fa-lg" }),
-                      _vm._v(" 個人層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "new" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個案管理")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("基本資料")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("支持強度量表")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("我的支持計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個別化支持計畫")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("ISP會議記錄")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人成果量表(POS)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("社區生活技能評量表")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("統計分析")
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#work" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-briefcase fa-lg" }),
-                      _vm._v(" 工作管理 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "work" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("組織層級")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("團隊層級")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _c("i", { staticClass: "fas fa-angle-right" }),
-                    _vm._v("個人層級")
-                  ])
-                ])
-              ]
-            ),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-question-circle fa-lg" }),
-                _vm._v(" HELP")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4badc1cf", module.exports)
-  }
-}
 
 /***/ }),
 

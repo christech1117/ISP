@@ -26,10 +26,10 @@
             </div>
             <div class="form-group">
                 <div v-if="isSave">
-                    <button @click.prevent="save">儲存</button>
-                    <button @click.prevent="cancel">取消</button>
+                    <button class="btn btn-xs btn-success" @click.prevent="save">儲存</button>
+                    <button class="btn btn-xs btn-secondary" @click.prevent="cancel">取消</button>
                 </div>
-                <button v-else @click.prevent="publish">發佈</button>
+                <button class="btn btn-xs btn-success" v-else @click.prevent="publish">發佈</button>
             </div>
         </form>
     </div>
@@ -128,8 +128,7 @@ export default {
     }
 }
 </script>
-<style scoped>
-    .content {
-        padding: 20px;
-    }
+<style lang="sass" scoped>
+    .content
+        padding: 70px 50px 100px 300px
 </style>
