@@ -2726,7 +2726,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n#side-bar *[data-v-4badc1cf], #side-bar body[data-v-4badc1cf] {\n    font-size: 14px;\n    margin: 0px;\n    padding: 0px;\n}\n#side-bar .brand[data-v-4badc1cf] {\n    background-color: #23282e;\n    line-height: 50px;\n    display: block;\n    text-align: center;\n    font-size: 14px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n    display: none;\n}\n#side-bar ul[data-v-4badc1cf], #side-bar li[data-v-4badc1cf] {\n    list-style: none;\n    line-height: 25px;\n    cursor: pointer;\n}\n#side-bar ul .active[data-v-4badc1cf], #side-bar li .active[data-v-4badc1cf] {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf], #side-bar li .sub-menu li[data-v-4badc1cf] {\n      background-color: #181c20;\n      border: none;\n      line-height: 20px;\n      border-bottom: 1px solid #23282e;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:hover, #side-bar li .sub-menu li[data-v-4badc1cf]:hover {\n        background-color: #020203;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:before, #side-bar li .sub-menu li[data-v-4badc1cf]:before {\n        font-family: \"Font Awesome 5 Free\";\n        content: \"\\F105\";\n        font-weight: 900;\n        padding: 0 10px;\n        vertical-align: middle;\n}\n#side-bar ul .sub-menu li .active[data-v-4badc1cf], #side-bar li .sub-menu li .active[data-v-4badc1cf] {\n        color: #d19b3d;\n        color: #d19b3d;\n}\n#side-bar li[data-v-4badc1cf] {\n    padding: 10px;\n    border-left: 3px solid #2e353d;\n    border-bottom: 1px solid #23282e;\n}\n#side-bar li[data-v-4badc1cf]:hover {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n#side-bar li a[data-v-4badc1cf] {\n      text-decoration: none;\n      color: #e1ffff;\n}\n#side-bar li a i[data-v-4badc1cf] {\n        padding-left: 10px;\n        width: 20px;\n        padding-right: 20px;\n}\n@media (max-width: 767px) {\n#side-bar[data-v-4badc1cf] {\n      position: relative;\n      width: 100%;\n      margin-bottom: 10px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n        display: block;\n        cursor: pointer;\n        position: absolute;\n        right: 10px;\n        top: 10px;\n        z-index: 10 !important;\n        padding: 3px;\n        background-color: #ffffff;\n        color: #000;\n        width: 40px;\n        text-align: center;\n}\n#side-bar .brand[data-v-4badc1cf] {\n        text-align: left !important;\n        font-size: 22px;\n        padding-left: 20px;\n        line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n#side-bar .menu-list .menu-content[data-v-4badc1cf] {\n      display: block;\n}\n}\n", ""]);
+exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n#side-bar *[data-v-4badc1cf], #side-bar body[data-v-4badc1cf] {\n    font-size: 14px;\n    margin: 0px;\n    padding: 0px;\n}\n#side-bar .brand[data-v-4badc1cf] {\n    background-color: #23282e;\n    line-height: 50px;\n    display: block;\n    text-align: center;\n    font-size: 14px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n    display: none;\n}\n#side-bar ul[data-v-4badc1cf], #side-bar li[data-v-4badc1cf] {\n    list-style: none;\n    line-height: 25px;\n    cursor: pointer;\n}\n#side-bar ul .active[data-v-4badc1cf], #side-bar li .active[data-v-4badc1cf] {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n}\n#side-bar ul .sub-menu a[data-v-4badc1cf], #side-bar li .sub-menu a[data-v-4badc1cf] {\n      color: #e1ffff;\n}\n#side-bar ul .sub-menu a[data-v-4badc1cf]:hover, #side-bar li .sub-menu a[data-v-4badc1cf]:hover {\n        text-decoration: none;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf], #side-bar li .sub-menu li[data-v-4badc1cf] {\n      background-color: #181c20;\n      border: none;\n      line-height: 20px;\n      border-bottom: 1px solid #23282e;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:hover, #side-bar li .sub-menu li[data-v-4badc1cf]:hover {\n        background-color: #020203;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:before, #side-bar li .sub-menu li[data-v-4badc1cf]:before {\n        font-family: \"Font Awesome 5 Free\";\n        content: \"\\F105\";\n        font-weight: 900;\n        padding: 0 10px;\n        vertical-align: middle;\n}\n#side-bar ul .sub-menu li .active[data-v-4badc1cf], #side-bar li .sub-menu li .active[data-v-4badc1cf] {\n        color: #d19b3d;\n}\n#side-bar li[data-v-4badc1cf] {\n    padding: 10px;\n    border-left: 3px solid #2e353d;\n    border-bottom: 1px solid #23282e;\n}\n#side-bar li[data-v-4badc1cf]:hover {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n#side-bar li a[data-v-4badc1cf] {\n      text-decoration: none;\n      color: #e1ffff;\n}\n#side-bar li a i[data-v-4badc1cf] {\n        padding-left: 10px;\n        width: 20px;\n        padding-right: 20px;\n}\n@media (max-width: 767px) {\n#side-bar[data-v-4badc1cf] {\n      position: relative;\n      width: 100%;\n      margin-bottom: 10px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n        display: block;\n        cursor: pointer;\n        position: absolute;\n        right: 10px;\n        top: 10px;\n        z-index: 10 !important;\n        padding: 3px;\n        background-color: #ffffff;\n        color: #000;\n        width: 40px;\n        text-align: center;\n}\n#side-bar .brand[data-v-4badc1cf] {\n        text-align: left !important;\n        font-size: 22px;\n        padding-left: 20px;\n        line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n#side-bar .menu-list .menu-content[data-v-4badc1cf] {\n      display: block;\n}\n}\n", ""]);
 
 // exports
 
@@ -2738,30 +2738,6 @@ exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  f
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2982,37 +2958,29 @@ var staticRenderFns = [
               "ul",
               { staticClass: "sub-menu collapse", attrs: { id: "products" } },
               [
-                _c("li", { staticClass: "active" }, [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v(" 組織基本資料")
+                _c("a", { attrs: { href: "organization/information" } }, [
+                  _c("li", { staticClass: "active" }, [_vm._v("組織基本資料")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("人員管理")
+                _c("a", { attrs: { href: "organization/users" } }, [
+                  _c("li", [_vm._v("人員管理")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("部門\\單位管理")
+                _c("a", { attrs: { href: "organization/department" } }, [
+                  _c("li", [_vm._v("部門\\單位管理")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("方案管理")
+                _c("a", { attrs: { href: "organization/plan" } }, [
+                  _c("li", [_vm._v("方案管理")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("檔案管理")
+                _c("a", { attrs: { href: "organization/file" } }, [
+                  _c("li", [_vm._v("檔案管理")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("組織效益效率量表(OEES)")
+                _c("a", { attrs: { href: "organization/#" } }, [
+                  _c("li", [_vm._v("組織效益效率量表(OEES)")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("發展及改善計畫")
+                _c("a", { attrs: { href: "organization/#" } }, [
+                  _c("li", [_vm._v("發展及改善計畫")])
                 ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }),
-                  _vm._v("統計分析")
+                _c("a", { attrs: { href: "organization/analysis" } }, [
+                  _c("li", [_vm._v("統計分析")])
                 ])
               ]
             ),

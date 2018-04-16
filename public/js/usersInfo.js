@@ -6606,13 +6606,13 @@ Object.defineProperty(exports, '__esModule', { value: true });
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(69)
+  __webpack_require__(61)
 }
 var normalizeComponent = __webpack_require__(9)
 /* script */
 var __vue_script__ = __webpack_require__(63)
 /* template */
-var __vue_template__ = __webpack_require__(64)
+var __vue_template__ = __webpack_require__(69)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -6652,11 +6652,65 @@ module.exports = Component.exports
 
 /***/ }),
 
+/***/ 61:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(62);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(7)("3896f764", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2038f0a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UsersInfo.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2038f0a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UsersInfo.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 62:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(4)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.content[data-v-2038f0a2] {\n  padding: 100px 50px 100px 300px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -6781,183 +6835,180 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 
-/***/ 64:
+/***/ 69:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "content" },
-    [
-      _vm._l(_vm.users, function(user) {
-        return _c("div", { key: user.id }, [
-          _c("h1", [_vm._v(_vm._s(user.name))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(user.avatar))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(user.work_start_date))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(user.work_status))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(user.phone))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(user.email))]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-xs btn-primary",
-              on: {
-                click: function($event) {
-                  _vm.modify(user)
+  return _c("div", { staticClass: "content" }, [
+    _c(
+      "table",
+      { staticClass: "table table-hover" },
+      [
+        _vm._m(0),
+        _vm._l(_vm.users, function(user) {
+          return _c("tbody", { key: user.id }, [
+            _c(
+              "tr",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.modify(user)
+                  }
                 }
-              }
-            },
-            [_vm._v("修改")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-xs btn-danger",
-              on: {
-                click: function($event) {
-                  _vm.remove(user.id)
-                }
-              }
-            },
-            [_vm._v("刪除")]
-          ),
-          _vm._v(" "),
-          _c("hr")
-        ])
+              },
+              [
+                _c("td", [_vm._v(_vm._s(user.name))]),
+                _c("td", [_vm._v(_vm._s(user.avatar))]),
+                _c("td", [_vm._v(_vm._s(user.departid))]),
+                _c("td", [_vm._v(_vm._s(user.work_title))]),
+                _c("td", [_vm._v(_vm._s(user.planid))]),
+                _c("td", [_vm._v(_vm._s(user.teamid))]),
+                _c("td", [_vm._v(_vm._s(user.work_status))]),
+                _c("td", [_vm._v(_vm._s(user.work_start_date))]),
+                _c("td", [
+                  _c(
+                    "span",
+                    {
+                      on: {
+                        click: function($event) {
+                          _vm.remove(user.id)
+                        }
+                      }
+                    },
+                    [_c("i", { staticClass: "fas fa-times" })]
+                  )
+                ])
+              ]
+            )
+          ])
+        })
+      ],
+      2
+    ),
+    _c("form", { attrs: { id: "form" } }, [
+      _c("div", {
+        staticClass: "form-group",
+        class: { "has-warning": _vm.titleWarning }
       }),
-      _vm._v(" "),
-      _c("form", { attrs: { id: "form" } }, [
-        _c(
-          "div",
+      _c("label", { staticClass: "control-label" }),
+      _vm._v("姓名"),
+      _vm.titleWarning ? _c("span", [_vm._v("不能空白")]) : _vm._e(),
+      _c("input", {
+        directives: [
           {
-            staticClass: "form-group",
-            class: { "has-warning": _vm.titleWarning }
-          },
-          [
-            _c("label", { staticClass: "control-label" }, [
-              _vm._v("姓名\n                "),
-              _vm.titleWarning ? _c("span", [_vm._v("不能空白")]) : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.user.name,
-                  expression: "user.name"
-                }
-              ],
-              staticClass: "form-control",
-              domProps: { value: _vm.user.name },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.name,
+            expression: "user.name"
+          }
+        ],
+        staticClass: "form-control",
+        domProps: { value: _vm.user.name },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "name", $event.target.value)
+          }
+        }
+      }),
+      _c("div", {
+        staticClass: "form-group",
+        class: { "has-warning": _vm.bodyWarning }
+      }),
+      _c("label", { staticClass: "control-label" }),
+      _vm._v("手機"),
+      _vm.bodyWarning ? _c("span", [_vm._v("不能空白")]) : _vm._e(),
+      _c("textarea", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.user.phone,
+            expression: "user.phone"
+          }
+        ],
+        staticClass: "form-control",
+        domProps: { value: _vm.user.phone },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.$set(_vm.user, "phone", $event.target.value)
+          }
+        }
+      }),
+      _c("div", { staticClass: "form-group" }),
+      _vm.isSave
+        ? _c("div", [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-xs btn-success",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.save($event)
                   }
-                  _vm.$set(_vm.user, "name", $event.target.value)
+                }
+              },
+              [_vm._v("儲存")]
+            ),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-xs btn-secondary",
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    return _vm.cancel($event)
+                  }
+                }
+              },
+              [_vm._v("取消")]
+            )
+          ])
+        : _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-success",
+              on: {
+                click: function($event) {
+                  $event.preventDefault()
+                  return _vm.publish($event)
                 }
               }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "form-group",
-            class: { "has-warning": _vm.bodyWarning }
-          },
-          [
-            _c("label", { staticClass: "control-label" }, [
-              _vm._v("手機\n                "),
-              _vm.bodyWarning ? _c("span", [_vm._v("不能空白")]) : _vm._e()
-            ]),
-            _vm._v(" "),
-            _c("textarea", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.user.phone,
-                  expression: "user.phone"
-                }
-              ],
-              staticClass: "form-control",
-              domProps: { value: _vm.user.phone },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.$set(_vm.user, "phone", $event.target.value)
-                }
-              }
-            })
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _vm.isSave
-            ? _c("div", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-xs btn-success",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.save($event)
-                      }
-                    }
-                  },
-                  [_vm._v("儲存")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-xs btn-secondary",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        return _vm.cancel($event)
-                      }
-                    }
-                  },
-                  [_vm._v("取消")]
-                )
-              ])
-            : _c(
-                "button",
-                {
-                  staticClass: "btn btn-xs btn-success",
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      return _vm.publish($event)
-                    }
-                  }
-                },
-                [_vm._v("發佈")]
-              )
-        ])
-      ])
-    ],
-    2
-  )
+            },
+            [_vm._v("發佈")]
+          )
+    ])
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("姓名")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("照片")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("部門")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("職稱")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("計畫")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("團隊")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("工作狀態")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("就職日期")]),
+        _c("th", { attrs: { scope: "col" } })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -6965,33 +7016,6 @@ if (false) {
   if (module.hot.data) {
     require("vue-hot-reload-api")      .rerender("data-v-2038f0a2", module.exports)
   }
-}
-
-/***/ }),
-
-/***/ 69:
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(70);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(7)("3896f764", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2038f0a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UsersInfo.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2038f0a2\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./UsersInfo.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
 }
 
 /***/ }),
@@ -7221,21 +7245,6 @@ function applyToTag (styleElement, obj) {
     styleElement.appendChild(document.createTextNode(css))
   }
 }
-
-
-/***/ }),
-
-/***/ 70:
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(4)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.content[data-v-2038f0a2] {\n  padding: 70px 50px 100px 300px;\n}\n", ""]);
-
-// exports
 
 
 /***/ }),

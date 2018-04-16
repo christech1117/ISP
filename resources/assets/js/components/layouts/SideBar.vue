@@ -16,30 +16,22 @@
             .col.text-right
               i.fas.fa-angle-down.fa-lg
       ul#products.sub-menu.collapse
-        li.active
-          a(href='#')
-          |  組織基本資料
-        li
-          a(href='#')
-          | 人員管理
-        li
-          a(href='#')
-          | 部門\單位管理
-        li
-          a(href='#')
-          | 方案管理
-        li
-          a(href='#')
-          | 檔案管理
-        li
-          a(href='#')
-          | 組織效益效率量表(OEES)
-        li
-          a(href='#')
-          | 發展及改善計畫
-        li
-          a(href='#')
-          | 統計分析
+        a(href='organization/information')
+          li.active 組織基本資料
+        a(href='organization/users')
+          li 人員管理
+        a(href='organization/department')
+          li 部門\單位管理
+        a(href='organization/plan')
+          li 方案管理
+        a(href='organization/file')
+          li 檔案管理
+        a(href='organization/#')
+          li 組織效益效率量表(OEES)
+        a(href='organization/#')
+          li 發展及改善計畫
+        a(href='organization/analysis')
+          li 統計分析
       li.collapsed(data-toggle='collapse', data-target='#service')
         a(href='#')
           .row
@@ -50,17 +42,13 @@
               i.fas.fa-angle-down.fa-lg
       ul#service.sub-menu.collapse
         li
-          a(href='#')
-            | 團隊管理
+          a(href='#') 團隊管理
         li
-          a(href='#')
-            | 個人與團隊特質量表(CFI)
+          a(href='#') 個人與團隊特質量表(CFI)
         li
-          a(href='#')
-            | 發展計畫
+          a(href='#') 發展計畫
         li
-          a(href='#')
-            | 統計分析
+          a(href='#') 統計分析
       li.collapsed(data-toggle='collapse', data-target='#new')
         a(href='#')
           .row
@@ -71,32 +59,23 @@
               i.fas.fa-angle-down.fa-lg
       ul#new.sub-menu.collapse
         li
-          a(href='#')
-            | 個案管理
+          a(href='#') 個案管理
         li
-          a(href='#')
-            | 基本資料
+          a(href='#') 基本資料
         li
-          a(href='#')
-            | 支持強度量表
+          a(href='#') 支持強度量表
         li
-          a(href='#')
-            | 我的支持計畫
+          a(href='#') 我的支持計畫
         li
-          a(href='#')
-            | 個別化支持計畫
+          a(href='#') 個別化支持計畫
         li
-          a(href='#')
-            | ISP會議記錄
+          a(href='#') ISP會議記錄
         li
-          a(href='#')
-            | 個人成果量表(POS)
+          a(href='#') 個人成果量表(POS)
         li
-          a(href='#')
-            | 社區生活技能評量表
+          a(href='#') 社區生活技能評量表
         li
-          a(href='#')
-            | 統計分析
+          a(href='#') 統計分析
       li.collapsed(data-toggle='collapse', data-target='#work')
         a(href='#')
           .row
@@ -107,14 +86,11 @@
               i.fas.fa-angle-down.fa-lg
       ul#work.sub-menu.collapse
         li
-          a(href='#')
-            | 組織層級
+          a(href='#') 組織層級
         li
-          a(href='#')
-            | 團隊層級
+          a(href='#') 團隊層級
         li
-          a(href='#')
-            | 個人層級
+          a(href='#') 個人層級
       li
         a(href='#')
           i.fas.fa-question-circle.fa-lg
@@ -159,6 +135,10 @@ export default {
       border-left: 3px solid #d19b3d
       background-color: #4f5b69    
     .sub-menu
+      a
+        color: #e1ffff
+        &:hover
+          text-decoration: none
       li
         background-color: #181c20
         border: none
@@ -174,8 +154,7 @@ export default {
           vertical-align: middle
         .active
           color: #d19b3d
-          a
-          color: #d19b3d  
+          
   li
     padding: 10px
     border-left: 3px solid #2e353d

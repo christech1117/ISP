@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', 'Make CRUD App By Laravel with Vue')
+@section('title', '人員管理')
 @section('content')
     <users-info>-</users-info>
 @endsection
