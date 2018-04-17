@@ -3,35 +3,33 @@
     <div class="scrollbar-content">
       <ul class="sidebar-menu">
         <li v-for="item in sideBarMenus" :key="item.name">
-          <router-link
+          <a :href="item.path"
             class="sidebar-link"
-            :to="item.path"
             @click="toggleMenuItem(item)"
             v-if="item.path">
-            <i class="sidebar-menu-item-icon" v-bind:class="item.icon"></i>
+            <i class="sidebar-menu-item-icon" :class="item.icon"></i>
             {{ item.title }}
-          </router-link>
+          </a>
           <a href="#"
              @click.prevent="toggleMenuItem(item)"
              class="sidebar-link"
-             v-bind:class="{expanded: item.expanded}"
+             :class="{expanded: item.expanded}"
              v-else>
-            <i class="sidebar-menu-item-icon" v-bind:class="item.icon"></i>
+            <i class="sidebar-menu-item-icon" :class="item.icon"></i>
             {{ item.title }}
             <i class="expand-icon fa fa-angle-down"></i>
           </a>
           <expanding>
             <ul class="sidebar-submenu in" v-show="item.expanded">
               <li v-for="childItem in item.children" :key="childItem.name">
-                <router-link
-                  class="sidebar-link sidebar-submenu-link"
-                  :to="childItem.path">
+                <a :href="childItem.path"
+                  class="sidebar-link sidebar-submenu-link">
                   <i class="sidebar-menu-item-icon"
-                     v-bind:class="childItem.icon"
+                     :class="childItem.icon"
                      v-if="childItem.icon"
                   ></i>
                   {{ childItem.title }}
-                </router-link>
+                </a>
               </li>
             </ul>
           </expanding>
@@ -260,7 +258,7 @@ export default {
   .expand-icon {
     color: $vue-green;
   }
-  router-link, a {
+  a {
     color: $white;
     text-decoration: none;
   }
