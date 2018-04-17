@@ -2530,33 +2530,7 @@ Popper.Defaults = Defaults;
 
 /***/ }),
 
-/***/ 23:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(24);
-
-
-/***/ }),
-
-/***/ 24:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__);
-__webpack_require__(5);
-
-
-FontAwesomeConfig = { searchPseudoElements: true };
-var app = new Vue({
-    el: '#app',
-    components: { SideBar: __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default.a }
-});
-
-/***/ }),
-
-/***/ 4:
+/***/ 12:
 /***/ (function(module, exports) {
 
 /*
@@ -2639,6 +2613,94 @@ function toComment(sourceMap) {
 
 /***/ }),
 
+/***/ 23:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(24);
+
+
+/***/ }),
+
+/***/ 24:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar__);
+__webpack_require__(4);
+
+
+FontAwesomeConfig = { searchPseudoElements: true };
+var app = new Vue({
+    el: '#app',
+    components: { SideBar: __WEBPACK_IMPORTED_MODULE_0__components_layouts_SideBar___default.a }
+});
+
+/***/ }),
+
+/***/ 4:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+window._ = __webpack_require__(9);
+window.Popper = __webpack_require__(1).default;
+window.Vue = __webpack_require__(10);
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.$ = window.jQuery = __webpack_require__(3);
+
+  __webpack_require__(5);
+} catch (e) {}
+
+/**
+ * We'll load the axios HTTP library which allows us to easily issue requests
+ * to our Laravel back-end. This library automatically handles sending the
+ * CSRF token as a header based on the value of the "XSRF" token cookie.
+ */
+
+window.axios = __webpack_require__(11);
+
+window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+
+/**
+ * Next we will register the CSRF Token as a common header with Axios so that
+ * all outgoing HTTP requests automatically have it attached. This is just
+ * a simple convenience so we don't have to attach every token manually.
+ */
+
+var token = document.head.querySelector('meta[name="csrf-token"]');
+
+if (token) {
+  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
+} else {
+  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
+}
+
+/**
+ * Echo exposes an expressive API for subscribing to channels and listening
+ * for events that are broadcast by Laravel. Echo and event broadcasting
+ * allows your team to easily build robust real-time web applications.
+ */
+
+// import Echo from 'laravel-echo'
+
+// window.Pusher = require('pusher-js');
+
+// window.Echo = new Echo({
+//     broadcaster: 'pusher',
+//     key: process.env.MIX_PUSHER_APP_KEY,
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
+// });
+
+/***/ }),
+
 /***/ 46:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2647,7 +2709,7 @@ function injectStyle (ssrContext) {
   if (disposed) return
   __webpack_require__(47)
 }
-var normalizeComponent = __webpack_require__(9)
+var normalizeComponent = __webpack_require__(8)
 /* script */
 var __vue_script__ = __webpack_require__(49)
 /* template */
@@ -2657,7 +2719,7 @@ var __vue_template_functional__ = false
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = "data-v-4badc1cf"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -2701,13 +2763,13 @@ var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(7)("5e2c69c2", content, false, {});
+var update = __webpack_require__(6)("501139ae", content, false, {});
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js?indentedSyntax!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue");
+   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue", function() {
+     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4badc1cf\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SideBar.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -2721,12 +2783,12 @@ if(false) {
 /***/ 48:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(4)(false);
+exports = module.exports = __webpack_require__(12)(false);
 // imports
 
 
 // module
-exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  font-weight: 200;\n  background-color: #2e353d;\n  position: fixed;\n  top: 0px;\n  width: 250px;\n  height: 100%;\n  color: #e1ffff;\n}\n#side-bar *[data-v-4badc1cf], #side-bar body[data-v-4badc1cf] {\n    font-size: 14px;\n    margin: 0px;\n    padding: 0px;\n}\n#side-bar .brand[data-v-4badc1cf] {\n    background-color: #23282e;\n    line-height: 50px;\n    display: block;\n    text-align: center;\n    font-size: 14px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n    display: none;\n}\n#side-bar ul[data-v-4badc1cf], #side-bar li[data-v-4badc1cf] {\n    list-style: none;\n    line-height: 25px;\n    cursor: pointer;\n}\n#side-bar ul .active[data-v-4badc1cf], #side-bar li .active[data-v-4badc1cf] {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n}\n#side-bar ul .sub-menu a[data-v-4badc1cf], #side-bar li .sub-menu a[data-v-4badc1cf] {\n      color: #e1ffff;\n}\n#side-bar ul .sub-menu a[data-v-4badc1cf]:hover, #side-bar li .sub-menu a[data-v-4badc1cf]:hover {\n        text-decoration: none;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf], #side-bar li .sub-menu li[data-v-4badc1cf] {\n      background-color: #181c20;\n      border: none;\n      line-height: 20px;\n      border-bottom: 1px solid #23282e;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:hover, #side-bar li .sub-menu li[data-v-4badc1cf]:hover {\n        background-color: #020203;\n}\n#side-bar ul .sub-menu li[data-v-4badc1cf]:before, #side-bar li .sub-menu li[data-v-4badc1cf]:before {\n        font-family: \"Font Awesome 5 Free\";\n        content: \"\\F105\";\n        font-weight: 900;\n        padding: 0 10px;\n        vertical-align: middle;\n}\n#side-bar ul .sub-menu li .active[data-v-4badc1cf], #side-bar li .sub-menu li .active[data-v-4badc1cf] {\n        color: #d19b3d;\n}\n#side-bar li[data-v-4badc1cf] {\n    padding: 10px;\n    border-left: 3px solid #2e353d;\n    border-bottom: 1px solid #23282e;\n}\n#side-bar li[data-v-4badc1cf]:hover {\n      border-left: 3px solid #d19b3d;\n      background-color: #4f5b69;\n      -webkit-transition: all 1s ease;\n      transition: all 1s ease;\n}\n#side-bar li a[data-v-4badc1cf] {\n      text-decoration: none;\n      color: #e1ffff;\n}\n#side-bar li a i[data-v-4badc1cf] {\n        padding-left: 10px;\n        width: 20px;\n        padding-right: 20px;\n}\n@media (max-width: 767px) {\n#side-bar[data-v-4badc1cf] {\n      position: relative;\n      width: 100%;\n      margin-bottom: 10px;\n}\n#side-bar .toggle-btn[data-v-4badc1cf] {\n        display: block;\n        cursor: pointer;\n        position: absolute;\n        right: 10px;\n        top: 10px;\n        z-index: 10 !important;\n        padding: 3px;\n        background-color: #ffffff;\n        color: #000;\n        width: 40px;\n        text-align: center;\n}\n#side-bar .brand[data-v-4badc1cf] {\n        text-align: left !important;\n        font-size: 22px;\n        padding-left: 20px;\n        line-height: 50px !important;\n}\n}\n@media (min-width: 767px) {\n#side-bar .menu-list .menu-content[data-v-4badc1cf] {\n      display: block;\n}\n}\n", ""]);
+exports.push([module.i, "\n.sidebar {\n  height: calc(100vh - 72px - 24px - 24px);\n  position: absolute;\n  width: 225px;\n  top: calc(72px + 24px);\n  left: 24px;\n  -webkit-transition: all 0.2s ease;\n  transition: all 0.2s ease;\n  opacity: 1;\n}\n@media (max-width: 991.98px) {\n.sidebar {\n      top: 5.8125rem;\n      left: 0.1875rem;\n      width: calc(100% - 0.375rem);\n      z-index: 1000;\n}\n}\n.sidebar .scrollbar-wrapper {\n    -webkit-box-shadow: 0px 8px 14.72px 1.28px rgba(101, 169, 119, 0.3);\n            box-shadow: 0px 8px 14.72px 1.28px rgba(101, 169, 119, 0.3);\n}\n.sidebar .scrollbar-content {\n    background: #333;\n}\n.sidebar-hidden_without-animation .sidebar {\n    -webkit-transition: none;\n    transition: none;\n}\n.sidebar-hidden .sidebar {\n    top: -150px;\n    opacity: 0;\n    z-index: -1000;\n}\n@media (max-width: 991.98px) {\n.sidebar-hidden .sidebar {\n        top: 5.8125rem;\n        opacity: 0;\n        z-index: 1000;\n        height: 0;\n}\n}\n.sidebar .sidebar-link {\n    position: relative;\n    height: 64px;\n    padding-left: 25px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    cursor: pointer;\n    text-decoration: none;\n}\n.sidebar .sidebar-link.router-link-active, .sidebar .sidebar-link:hover {\n      color: #fff;\n      background-color: #161616;\n}\n.sidebar .sidebar-link.router-link-active .sidebar-menu-item-icon,\n      .sidebar .sidebar-link.router-link-active .expand-icon, .sidebar .sidebar-link:hover .sidebar-menu-item-icon,\n      .sidebar .sidebar-link:hover .expand-icon {\n        color: #fff;\n}\n.sidebar .sidebar-link .expand-icon {\n      position: absolute;\n      right: 16px;\n      top: calc(50% - 16px/2);\n      font-weight: bold;\n      -webkit-transition: -webkit-transform 0.3s ease;\n      transition: -webkit-transform 0.3s ease;\n      transition: transform 0.3s ease;\n      transition: transform 0.3s ease, -webkit-transform 0.3s ease;\n}\n.sidebar .sidebar-link.expanded .expand-icon {\n      -webkit-transform: rotate(180deg);\n              transform: rotate(180deg);\n}\n.sidebar .sidebar-link .sidebar-menu-item-icon {\n      font-size: 19px;\n      color: #4ae387;\n      margin-right: 14px;\n}\n.sidebar .sidebar-link .sidebar-menu-item-icon.fa-dashboard {\n        /* Temp fix */\n        position: relative;\n        top: -2px;\n}\n.sidebar .sidebar-submenu-link {\n    height: 48px;\n}\n.sidebar .sidebar-menu,\n  .sidebar .sidebar-submenu {\n    list-style: none;\n    padding-left: 0;\n}\n.sidebar .sidebar-menu li,\n    .sidebar .sidebar-submenu li {\n      display: block;\n      padding-left: 0;\n}\n.sidebar .sidebar-submenu .sidebar-link {\n    padding-left: 74px;\n    font-size: 85%;\n}\n.sidebar .sidebar-menu {\n    max-height: 100%;\n    margin-bottom: 0;\n}\n.sidebar .expand-icon {\n    color: #4ae387;\n}\n.sidebar router-link, .sidebar a {\n    color: #fff;\n    text-decoration: none;\n}\n", ""]);
 
 // exports
 
@@ -2738,61 +2800,8 @@ exports.push([module.i, "\n#side-bar[data-v-4badc1cf] {\n  font-size: 5rem;\n  f
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_bulma_expanding_src_Expanding__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_bulma_expanding_src_Expanding___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_bulma_expanding_src_Expanding__);
 //
 //
 //
@@ -2838,308 +2847,110 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({});
+// import { mapGetters, mapActions } from 'vuex'
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    toggleMenuItem: function toggleMenuItem(item) {
+      alert('123');
+      console.log(item);
+      if (item.children) {
+        this.expand({ // TODO: check default prop
+          menuItem: item,
+          expand: !item.expanded
+        });
+      }
+    }
+  },
+  data: function data() {
+    return {
+      expand: false,
+      sideBarMenus: [{
+        "icon": "fas fa-tachometer-alt fa-lg",
+        "path": "/dashboard",
+        "title": "總覽"
+      }, {
+        "icon": "fas fa-user fa-lg",
+        "path": "/members_management",
+        "title": "人員管理"
+      }, {
+        "icon": "fas fa-user fa-lg",
+        "title": "組織管理",
+        "item.expanded": false,
+        "children": [{
+          "path": "/organization/basic",
+          "title": "組織基本資料"
+        }, {
+          "path": "/organization/department",
+          "title": "部門管理"
+        }, {
+          "path": "/organization/plan",
+          "title": "方案管理"
+        }, {
+          "path": "/organization/files",
+          "title": "檔案管理"
+        }]
+      }, {
+        "icon": "fa fa-user fa-lg",
+        "path": "/person",
+        "title": "個人層級"
+        // "children": [
+        //   {
+        //     "path": "/person/basic",
+        //     "title": "組織基本資料"
+        //   },
+        //   {
+        //     "path": "/person/department",
+        //     "title": "部門管理"
+        //   },
+        //   {
+        //     "path": "/person/plan",
+        //     "title": "方案管理"
+        //   },
+        //   {
+        //     "path": "/person/files",
+        //     "title": "檔案管理"
+        //   }
+        // ]
+      }]
+    };
+  },
+
+  components: {
+    Expanding: __WEBPACK_IMPORTED_MODULE_0_vue_bulma_expanding_src_Expanding___default.a
+  }
+
+  // computed: {
+  //   ...mapGetters({
+  //     'menuItems': 'menuItems'
+  //   })
+  // },
+  // watch: {
+  //   $route (route) {
+  //     let parent = _findMatchingParentMenuItem.call(this, route.name) || {}
+  //     this.menuItems.forEach((item) => {
+  //       this.expand({
+  //         menuItem: item,
+  //         expand: parent.name === item.name
+  //       })
+  //     })
+  //   }
+  // },
+
+  // function _findMatchingParentMenuItem (itemName) {
+  //   let parentItem
+  //   this.menuItems.forEach((item) => {
+  //     parentItem = (item.children && item.children.find((child) => child.name === itemName)) ? item : parentItem
+  //   })
+  //   return parentItem
+  // }
+
+});
 
 /***/ }),
 
 /***/ 5:
-/***/ (function(module, exports, __webpack_require__) {
-
-
-window._ = __webpack_require__(10);
-window.Popper = __webpack_require__(1).default;
-window.Vue = __webpack_require__(11);
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.$ = window.jQuery = __webpack_require__(3);
-
-  __webpack_require__(6);
-} catch (e) {}
-
-/**
- * We'll load the axios HTTP library which allows us to easily issue requests
- * to our Laravel back-end. This library automatically handles sending the
- * CSRF token as a header based on the value of the "XSRF" token cookie.
- */
-
-window.axios = __webpack_require__(12);
-
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
-/**
- * Next we will register the CSRF Token as a common header with Axios so that
- * all outgoing HTTP requests automatically have it attached. This is just
- * a simple convenience so we don't have to attach every token manually.
- */
-
-var token = document.head.querySelector('meta[name="csrf-token"]');
-
-if (token) {
-  window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
-
-/**
- * Echo exposes an expressive API for subscribing to channels and listening
- * for events that are broadcast by Laravel. Echo and event broadcasting
- * allows your team to easily build robust real-time web applications.
- */
-
-// import Echo from 'laravel-echo'
-
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: process.env.MIX_PUSHER_APP_KEY,
-//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
-//     encrypted: true
-// });
-
-/***/ }),
-
-/***/ 50:
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "side-bar" } }, [
-      _c("div", { staticClass: "brand" }, [_vm._v("Brand Logo")]),
-      _c("div", { staticClass: "menu-list" }, [
-        _c(
-          "ul",
-          {
-            staticClass: "menu-content collapse out fa-ul",
-            attrs: { id: "menu-content" }
-          },
-          [
-            _c("li", { staticClass: "active" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-globe fa-lg" }),
-                _vm._v(" 總覽")
-              ])
-            ]),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#products" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-sitemap fa-lg" }),
-                      _vm._v(" 組織層級")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "products" } },
-              [
-                _c("a", { attrs: { href: "organization/information" } }, [
-                  _c("li", { staticClass: "active" }, [_vm._v("組織基本資料")])
-                ]),
-                _c("a", { attrs: { href: "organization/users" } }, [
-                  _c("li", [_vm._v("人員管理")])
-                ]),
-                _c("a", { attrs: { href: "organization/department" } }, [
-                  _c("li", [_vm._v("部門\\單位管理")])
-                ]),
-                _c("a", { attrs: { href: "organization/plan" } }, [
-                  _c("li", [_vm._v("方案管理")])
-                ]),
-                _c("a", { attrs: { href: "organization/file" } }, [
-                  _c("li", [_vm._v("檔案管理")])
-                ]),
-                _c("a", { attrs: { href: "organization/#" } }, [
-                  _c("li", [_vm._v("組織效益效率量表(OEES)")])
-                ]),
-                _c("a", { attrs: { href: "organization/#" } }, [
-                  _c("li", [_vm._v("發展及改善計畫")])
-                ]),
-                _c("a", { attrs: { href: "organization/analysis" } }, [
-                  _c("li", [_vm._v("統計分析")])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#service" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fa fa-users fa-lg" }),
-                      _vm._v(" 團隊層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "service" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("團隊管理")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("個人與團隊特質量表(CFI)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("發展計畫")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("統計分析")])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#new" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-user fa-lg" }),
-                      _vm._v(" 個人層級 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "new" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("個案管理")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("基本資料")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("支持強度量表")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("我的支持計畫")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("個別化支持計畫")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("ISP會議記錄")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("個人成果量表(POS)")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("社區生活技能評量表")
-                  ])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("統計分析")])
-                ])
-              ]
-            ),
-            _c(
-              "li",
-              {
-                staticClass: "collapsed",
-                attrs: { "data-toggle": "collapse", "data-target": "#work" }
-              },
-              [
-                _c("a", { attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "row" }, [
-                    _c("div", { staticClass: "col" }, [
-                      _c("i", { staticClass: "fas fa-briefcase fa-lg" }),
-                      _vm._v(" 工作管理 ")
-                    ]),
-                    _c("div", { staticClass: "col text-right" }, [
-                      _c("i", { staticClass: "fas fa-angle-down fa-lg" })
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _c(
-              "ul",
-              { staticClass: "sub-menu collapse", attrs: { id: "work" } },
-              [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("組織層級")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("團隊層級")])
-                ]),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("個人層級")])
-                ])
-              ]
-            ),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "fas fa-question-circle fa-lg" }),
-                _vm._v(" HELP")
-              ])
-            ])
-          ]
-        )
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4badc1cf", module.exports)
-  }
-}
-
-/***/ }),
-
-/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -7040,7 +6851,134 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ }),
 
-/***/ 7:
+/***/ 50:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("aside", { staticClass: "sidebar" }, [
+    _c("div", { staticClass: "scrollbar-content" }, [
+      _c(
+        "ul",
+        { staticClass: "sidebar-menu" },
+        _vm._l(_vm.sideBarMenus, function(item) {
+          return _c(
+            "li",
+            { key: item.name },
+            [
+              item.path
+                ? _c(
+                    "router-link",
+                    {
+                      staticClass: "sidebar-link",
+                      attrs: { to: item.path },
+                      on: {
+                        click: function($event) {
+                          _vm.toggleMenuItem(item)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "sidebar-menu-item-icon",
+                        class: item.icon
+                      }),
+                      _vm._v("\n          " + _vm._s(item.title) + "\n        ")
+                    ]
+                  )
+                : _c(
+                    "a",
+                    {
+                      staticClass: "sidebar-link",
+                      class: { expanded: item.expanded },
+                      attrs: { href: "#" },
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.toggleMenuItem(item)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "sidebar-menu-item-icon",
+                        class: item.icon
+                      }),
+                      _vm._v(
+                        "\n          " + _vm._s(item.title) + "\n          "
+                      ),
+                      _c("i", { staticClass: "expand-icon fa fa-angle-down" })
+                    ]
+                  ),
+              _vm._v(" "),
+              _c("expanding", [
+                _c(
+                  "ul",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: item.expanded,
+                        expression: "item.expanded"
+                      }
+                    ],
+                    staticClass: "sidebar-submenu in"
+                  },
+                  _vm._l(item.children, function(childItem) {
+                    return _c(
+                      "li",
+                      { key: childItem.name },
+                      [
+                        _c(
+                          "router-link",
+                          {
+                            staticClass: "sidebar-link sidebar-submenu-link",
+                            attrs: { to: childItem.path }
+                          },
+                          [
+                            childItem.icon
+                              ? _c("i", {
+                                  staticClass: "sidebar-menu-item-icon",
+                                  class: childItem.icon
+                                })
+                              : _vm._e(),
+                            _vm._v(
+                              "\n                " +
+                                _vm._s(childItem.title) +
+                                "\n              "
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  })
+                )
+              ])
+            ],
+            1
+          )
+        })
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4badc1cf", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -7059,7 +6997,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(8)
+var listToStyles = __webpack_require__(7)
 
 /*
 type StyleObject = {
@@ -7269,7 +7207,59 @@ function applyToTag (styleElement, obj) {
 
 /***/ }),
 
-/***/ 8:
+/***/ 69:
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(70)
+}
+var normalizeComponent = __webpack_require__(8)
+/* script */
+var __vue_script__ = __webpack_require__(72)
+/* template */
+var __vue_template__ = __webpack_require__(73)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-4409f938"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "node_modules/vue-bulma-expanding/src/Expanding.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4409f938", Component.options)
+  } else {
+    hotAPI.reload("data-v-4409f938", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 7:
 /***/ (function(module, exports) {
 
 /**
@@ -7303,7 +7293,127 @@ module.exports = function listToStyles (parentId, list) {
 
 /***/ }),
 
-/***/ 9:
+/***/ 70:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(71);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(6)("314e653d", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../css-loader/index.js!../../vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4409f938\",\"scoped\":true,\"hasInlineConfig\":true}!../../sass-loader/lib/loader.js!../../vue-loader/lib/selector.js?type=styles&index=0!./Expanding.vue", function() {
+     var newContent = require("!!../../css-loader/index.js!../../vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-4409f938\",\"scoped\":true,\"hasInlineConfig\":true}!../../sass-loader/lib/loader.js!../../vue-loader/lib/selector.js?type=styles&index=0!./Expanding.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 71:
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.collapse[data-v-4409f938] {\n  display: none;\n}\n.collapse.in[data-v-4409f938] {\n    display: block;\n}\n.collapsing[data-v-4409f938] {\n  position: relative;\n  height: 0;\n  overflow: hidden;\n  -webkit-transition: height .377s ease;\n  transition: height .377s ease;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ 72:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  methods: {
+    beforeEnter: function beforeEnter(el) {
+      el.classList.remove('collapse');
+      el.style.display = 'block';
+      el.classList.add('collapsing');
+      el.style.height = el.scrollHeight + 'px';
+    },
+    afterEnter: function afterEnter(el) {
+      el.classList.remove('collapsing');
+      el.classList.add('collapse', 'in');
+    },
+    beforeLeave: function beforeLeave(el) {
+      el.classList.add('collapsing');
+      el.classList.remove('collapse', 'in');
+      el.style.height = 0;
+    },
+    afterLeave: function afterLeave(el) {
+      el.classList.remove('collapsing');
+      el.classList.add('collapse');
+      el.style.display = 'none';
+    }
+  }
+
+});
+
+/***/ }),
+
+/***/ 73:
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "transition",
+    {
+      on: {
+        beforeEnter: _vm.beforeEnter,
+        afterEnter: _vm.afterEnter,
+        beforeLeave: _vm.beforeLeave,
+        afterLeave: _vm.afterLeave
+      }
+    },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4409f938", module.exports)
+  }
+}
+
+/***/ }),
+
+/***/ 8:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
