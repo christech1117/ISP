@@ -1,206 +1,309 @@
-<template lang="pug">
-#side-bar
-  .brand Brand Logo
-  .menu-list
-    ul#menu-content.menu-content.collapse.out.fa-ul
-      li.active
-        a(href='#')
-          i.fas.fa-globe.fa-lg
-          |  總覽
-      li.collapsed(data-toggle='collapse', data-target='#products')
-        a(href='#')
-          .row
-            .col
-              i.fas.fa-sitemap.fa-lg
-              |  組織層級
-            .col.text-right
-              i.fas.fa-angle-down.fa-lg
-      ul#products.sub-menu.collapse
-        a(href='organization/information')
-          li.active 組織基本資料
-        a(href='organization/users')
-          li 人員管理
-        a(href='organization/department')
-          li 部門\單位管理
-        a(href='organization/plan')
-          li 方案管理
-        a(href='organization/file')
-          li 檔案管理
-        a(href='organization/#')
-          li 組織效益效率量表(OEES)
-        a(href='organization/#')
-          li 發展及改善計畫
-        a(href='organization/analysis')
-          li 統計分析
-      li.collapsed(data-toggle='collapse', data-target='#service')
-        a(href='#')
-          .row
-            .col
-              i.fa.fa-users.fa-lg
-              |  團隊層級 
-            .col.text-right
-              i.fas.fa-angle-down.fa-lg
-      ul#service.sub-menu.collapse
-        li
-          a(href='#') 團隊管理
-        li
-          a(href='#') 個人與團隊特質量表(CFI)
-        li
-          a(href='#') 發展計畫
-        li
-          a(href='#') 統計分析
-      li.collapsed(data-toggle='collapse', data-target='#new')
-        a(href='#')
-          .row
-            .col
-              i.fas.fa-user.fa-lg
-              |  個人層級 
-            .col.text-right
-              i.fas.fa-angle-down.fa-lg
-      ul#new.sub-menu.collapse
-        li
-          a(href='#') 個案管理
-        li
-          a(href='#') 基本資料
-        li
-          a(href='#') 支持強度量表
-        li
-          a(href='#') 我的支持計畫
-        li
-          a(href='#') 個別化支持計畫
-        li
-          a(href='#') ISP會議記錄
-        li
-          a(href='#') 個人成果量表(POS)
-        li
-          a(href='#') 社區生活技能評量表
-        li
-          a(href='#') 統計分析
-      li.collapsed(data-toggle='collapse', data-target='#work')
-        a(href='#')
-          .row
-            .col
-              i.fas.fa-briefcase.fa-lg
-              |  工作管理 
-            .col.text-right
-              i.fas.fa-angle-down.fa-lg
-      ul#work.sub-menu.collapse
-        li
-          a(href='#') 組織層級
-        li
-          a(href='#') 團隊層級
-        li
-          a(href='#') 個人層級
-      li
-        a(href='#')
-          i.fas.fa-question-circle.fa-lg
-          |  HELP
+<template>
+  <aside class="sidebar">
+    <div class="scrollbar-content">
+      <ul class="sidebar-menu">
+        <li v-for="item in sideBarMenus" :key="item.name">
+          <a :href="item.path"
+            class="sidebar-link"
+            v-if="item.path">
+            <i class="sidebar-menu-item-icon" :class="item.icon"></i>
+            {{ item.title }}
+          </a>
+          <a href="#"
+             @click.prevent="toggleMenuItem(item)"
+             class="sidebar-link"
+             v-else>
+            <i class="sidebar-menu-item-icon" :class="item.icon"></i>
+            {{ item.title }}
+            <i class="expand-icon fa fa-angle-down"></i>
+          </a>
+          <expanding>
+            <ul class="sidebar-submenu in" v-show="item.expanded">
+              <li v-for="childItem in item.children" :key="childItem.name">
+                <a :href="childItem.path"
+                  class="sidebar-link sidebar-submenu-link">
+                  <i class="sidebar-menu-item-icon"
+                     :class="childItem.icon"
+                     v-if="childItem.icon"
+                  ></i>
+                  {{ childItem.title }}
+                </a>
+              </li>
+            </ul>
+          </expanding>
+        </li>
+      </ul>
+    </div>
 
+  </aside>
 </template>
-<script>
-export default {
 
+<script>
+// import { mapGetters, mapActions } from 'vuex'
+import Expanding from 'vue-bulma-expanding/src/Expanding'
+
+export default {
+  data () {
+    return {
+      sideBarMenus: [
+        {
+          "icon": "fas fa-database fa-lg",
+          "path": "/dashboard",
+          "title": "總覽"
+        },
+        {
+          "icon": "fas fa-address-book fa-lg",
+          "path": "/members",
+          "title": "人員管理"
+        },
+        {
+          "icon": "fas fa-building fa-lg",
+          "title": "組織管理",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/compony/basic",
+              "title": "組織基本資料"
+            },
+            {
+              "path": "/compony/department",
+              "title": "部門管理"
+            },
+            {
+              "path": "/compony/plan",
+              "title": "方案管理"
+            },
+            {
+              "path": "/compony/files",
+              "title": "檔案管理"
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-user fa-lg",
+          "title": "個人層級",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/person/basic",
+              "title": "基本資料"
+            },
+            {
+              "path": "/person/sis",
+              "title": "支持強度強表(SIS)"
+            },
+            {
+              "path": "/person/mysupport_plan",
+              "title": "我的支持計畫"
+            },
+            {
+              "path": "/person/support_plan",
+              "title": "個別化支持計畫"
+            },
+            {
+              "path": "/person/metting_record",
+              "title": "ISP會議記錄"
+            },
+            {
+              "path": "/person/pos",
+              "title": "個人成果量表(POS)"
+            },
+            {
+              "path": "/person/community_skill",
+              "title": "社區生活技能評量表"
+            },
+            {
+              "path": "/person/statistic",
+              "title": "統計分析" 
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-users fa-lg",
+          "title": "團隊層級",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/team/basic",
+              "title": "團隊管理"
+            },
+            {
+              "path": "/team/person_team",
+              "title": "個人與團隊特質量表"
+            },
+            {
+              "path": "/team/develop_plan",
+              "title": "發展計畫"
+            },
+            {
+              "path": "/team/cfi_statistic",
+              "title": "CFI統計"
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-sitemap fa-lg",
+          "title": "組織層級",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/organization/oees",
+              "title": "組織效益效率量表(OEES)"
+            },
+            {
+              "path": "/organization/develop_plan",
+              "title": "發展及改善計畫"
+            },
+            {
+              "path": "/organization/statistic",
+              "title": "統計分析"
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-briefcase",
+          "title": "工作管理",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/person/management",
+              "title": "個人層級"
+            },
+            {
+              "path": "/team/management",
+              "title": "團隊層級"
+            },
+            {
+              "path": "/organization/management",
+              "title": "組織層級"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  components: {
+    Expanding
+  },
+  methods: {
+    toggleMenuItem (item) {
+      if (item.children) {
+        item.expanded = !item.expanded;
+      }
+    }
+  }
 }
 </script>
 
-<style lang="sass" scoped>
-#side-bar
-  *, body
-    font-size: 14px
-    margin: 0px
-    padding: 0px
+<style lang="scss">
+@import "../../../sass/_variables.scss";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
 
-  font-size: 5rem
-  font-weight: 200
-  background-color: #2e353d
-  position: fixed
-  top: 0px
-  width: 250px
-  height: 100%
-  color: #e1ffff
-  .brand 
-    background-color: #23282e
-    line-height: 50px
-    display: block
-    text-align: center
-    font-size: 14px
-  .toggle-btn
-    display: none
-
-  ul, li
-    list-style: none
-    line-height: 25px
-    cursor: pointer
-    .active
-      border-left: 3px solid #d19b3d
-      background-color: #4f5b69    
-    .sub-menu
-      a
-        color: #e1ffff
-        &:hover
-          text-decoration: none
-      li
-        background-color: #181c20
-        border: none
-        line-height: 20px
-        border-bottom: 1px solid #23282e
-        &:hover
-          background-color: #020203
-        &:before
-          font-family: "Font Awesome\ 5 Free"
-          content: "\f105"
-          font-weight: 900
-          padding: 0 10px
-          vertical-align: middle
-        .active
-          color: #d19b3d
-          
-  li
-    padding: 10px
-    border-left: 3px solid #2e353d
-    border-bottom: 1px solid #23282e
-    &:hover
-      border-left: 3px solid #d19b3d
-      background-color: #4f5b69
-      -webkit-transition: all 1s ease
-      -moz-transition: all 1s ease
-      -o-transition: all 1s ease
-      -ms-transition: all 1s ease
-      transition: all 1s ease
-    a
-      text-decoration: none
-      color: #e1ffff
-      i
-        padding-left: 10px
-        width: 20px
-        padding-right: 20px
-
-  @media (max-width: 767px) 
-    position: relative
-    width: 100%
-    margin-bottom: 10px
-    
-    .toggle-btn 
-      display: block
-      cursor: pointer
-      position: absolute
-      right: 10px
-      top: 10px
-      z-index: 10 !important
-      padding: 3px
-      background-color: #ffffff
-      color: #000
-      width: 40px
-      text-align: center
-    
-    .brand
-      text-align: left !important
-      font-size: 22px
-      padding-left: 20px
-      line-height: 50px !important
-    
-  
-  @media (min-width: 767px) 
-    .menu-list .menu-content 
-      display: block
+.sidebar {
+  @include media-breakpoint-down(md) {
+    top: $sidebar-mobile-top;
+    left: $sidebar-mobile-left;
+    width: $sidebar-mobile-width;
+    z-index: $sidebar-mobile-z-index;
+  }
+  height: $sidebar-viewport-height;
+  .scrollbar-wrapper {
+    box-shadow: $sidebar-box-shadow;
+  }
+  .scrollbar-content {
+    background: $sidebar-bg;
+  }
+  position: absolute;
+  width: $sidebar-width;
+  top: $sidebar-top;
+  left: $sidebar-left;
+  transition: all 0.2s ease;
+  opacity: 1;
+  .sidebar-hidden_without-animation & {
+    transition: none;
+  }
+  .sidebar-hidden & {
+    @include media-breakpoint-down(md) {
+      top: $sidebar-hidden-top-mobile;
+      opacity: 0;
+      z-index: $sidebar-mobile-z-index;
+      height: $sidebar-hidden-height-mobile;
+    }
+    top: $sidebar-hidden-top;
+    opacity: 0;
+    z-index: $min-z-index;
+  }
+  .sidebar-link {
+    position: relative;
+    height: $sidebar-link-height;
+    padding-left: $sidebar-link-pl;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    &.router-link-active,
+    &:hover {
+      color: $white;
+      background-color: $sidebar-link-active-bg;
+      .sidebar-menu-item-icon,
+      .expand-icon {
+        color: $white;
+      }
+    }
+    .expand-icon {
+      position: absolute;
+      right: $sidebar-arrow-right;
+      top: calc(50% - #{$font-size-root}/2);
+      font-weight: bold;
+      transition: transform 0.3s ease;
+    }
+    &.expanded {
+      .expand-icon {
+        transform: rotate(180deg);
+      }
+    }
+    .sidebar-menu-item-icon {
+      font-size: $sidebar-menu-item-icon-size;
+      color: $vue-green;
+      margin-right: 14px;
+      &.fa-dashboard {
+        /* Temp fix */
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+  .sidebar-submenu-link {
+    height: $sidebar-submenu-link-height;
+  }
+  .sidebar-menu,
+  .sidebar-submenu {
+    list-style: none;
+    padding-left: 0;
+    li {
+      display: block;
+      padding-left: 0;
+    }
+  }
+  .sidebar-submenu {
+    .sidebar-link {
+      padding-left: $sidebar-submenu-link-pl;
+      font-size: $font-size-smaller;
+    }
+  }
+  .sidebar-menu {
+    max-height: 100%;
+    margin-bottom: 0;
+  }
+  .expand-icon {
+    color: $vue-green;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
 </style>
