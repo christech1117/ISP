@@ -7138,16 +7138,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         "title": "組織管理",
         "expanded": false,
         "children": [{
-          "path": "/compony/basic",
+          "path": "/company/basic",
           "title": "組織基本資料"
         }, {
-          "path": "/compony/department",
+          "path": "/company/department",
           "title": "部門管理"
         }, {
-          "path": "/compony/plan",
+          "path": "/company/plan",
           "title": "方案管理"
         }, {
-          "path": "/compony/files",
+          "path": "/company/files",
           "title": "檔案管理"
         }]
       }, {
@@ -7701,8 +7701,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            users: [],
-            user: {
+            members: [],
+            member: {
                 id: null,
                 name: '',
                 phone: ''
@@ -7716,62 +7716,62 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     methods: {
         init: function init() {
             var self = this;
-            axios.get('/api/users').then(function (response) {
-                self.users = response.data;
+            axios.get('/api/member').then(function (response) {
+                self.members = response.data;
             }).catch(function (error) {
                 console.log(error.response);
             });
         },
         publish: function publish() {
-            this.titleWarning = this.user.name.trim().length == 0;
-            this.bodyWarning = this.user.phone.trim().length == 0;
+            this.titleWarning = this.member.name.trim().length == 0;
+            this.bodyWarning = this.member.phone.trim().length == 0;
             if (this.titleWarning || this.bodyWarning) return;
             // 
             var self = this;
-            console.log(this.user);
-            axios.post('/api/users', this.user).then(function (response) {
+            console.log(this.member);
+            axios.post('/api/members', this.member).then(function (response) {
                 if (response.data['ok']) {
                     self.init();
                     self.titleWarning = false;
                     self.bodyWarning = false;
-                    self.user = { id: null, name: '', phone: '' };
+                    self.member = { id: null, name: '', phone: '' };
                 }
             }).catch(function (error) {
                 console.log(error.response);
             });
         },
-        modify: function modify(user) {
+        modify: function modify(member) {
             location.href = "#form";
-            this.user.id = user.id;
-            this.user.name = user.name;
-            this.user.phone = user.phone;
+            this.member.id = member.id;
+            this.member.name = member.name;
+            this.member.phone = member.phone;
             this.isSave = true;
-            console.log(this.user);
+            console.log(this.member);
         },
         save: function save() {
             var self = this;
-            axios.put('/api/users/' + this.user.id, this.user).then(function (response) {
+            axios.put('/api/members/' + this.member.id, this.member).then(function (response) {
                 if (response.data['ok']) {
                     self.init();
                     self.isSave = false;
-                    self.user = { id: null, name: '', phone: '' };
+                    self.member = { id: null, name: '', phone: '' };
                 }
             }).catch(function (error) {
                 console.log(error.response);
             });
         },
         cancel: function cancel() {
-            this.user = { id: null, name: '', phone: '' };
+            this.member = { id: null, name: '', phone: '' };
             this.isSave = false;
         },
         remove: function remove(id) {
             var self = this;
-            axios.delete('/api/users/' + id).then(function (response) {
+            axios.delete('/api/members/' + id).then(function (response) {
                 if (response.data['ok']) {
                     console.log(id);
                     self.init();
                     self.isSave = false;
-                    self.user = { id: null, name: '', phone: '' };
+                    self.member = { id: null, name: '', phone: '' };
                 }
             }).catch(function (error) {
                 console.log(error.response);
@@ -7797,33 +7797,33 @@ var render = function() {
       { staticClass: "table table-hover" },
       [
         _vm._m(0),
-        _vm._l(_vm.users, function(user) {
-          return _c("tbody", { key: user.id }, [
+        _vm._l(_vm.members, function(member) {
+          return _c("tbody", { key: member.id }, [
             _c(
               "tr",
               {
                 on: {
                   click: function($event) {
-                    _vm.modify(user)
+                    _vm.modify(member)
                   }
                 }
               },
               [
-                _c("td", [_vm._v(_vm._s(user.name))]),
-                _c("td", [_vm._v(_vm._s(user.avatar))]),
-                _c("td", [_vm._v(_vm._s(user.departid))]),
-                _c("td", [_vm._v(_vm._s(user.work_title))]),
-                _c("td", [_vm._v(_vm._s(user.planid))]),
-                _c("td", [_vm._v(_vm._s(user.teamid))]),
-                _c("td", [_vm._v(_vm._s(user.work_status))]),
-                _c("td", [_vm._v(_vm._s(user.work_start_date))]),
+                _c("td", [_vm._v(_vm._s(member.name))]),
+                _c("td", [_vm._v(_vm._s(member.avatar))]),
+                _c("td", [_vm._v(_vm._s(member.depart_id))]),
+                _c("td", [_vm._v(_vm._s(member.work_title))]),
+                _c("td", [_vm._v(_vm._s(member.plan_id))]),
+                _c("td", [_vm._v(_vm._s(member.team_id))]),
+                _c("td", [_vm._v(_vm._s(member.work_status))]),
+                _c("td", [_vm._v(_vm._s(member.work_start_date))]),
                 _c("td", [
                   _c(
                     "span",
                     {
                       on: {
                         click: function($event) {
-                          _vm.remove(user.id)
+                          _vm.remove(member.id)
                         }
                       }
                     },
@@ -7850,18 +7850,18 @@ var render = function() {
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.user.name,
-            expression: "user.name"
+            value: _vm.member.name,
+            expression: "member.name"
           }
         ],
         staticClass: "form-control",
-        domProps: { value: _vm.user.name },
+        domProps: { value: _vm.member.name },
         on: {
           input: function($event) {
             if ($event.target.composing) {
               return
             }
-            _vm.$set(_vm.user, "name", $event.target.value)
+            _vm.$set(_vm.member, "name", $event.target.value)
           }
         }
       }),
@@ -7877,18 +7877,18 @@ var render = function() {
           {
             name: "model",
             rawName: "v-model",
-            value: _vm.user.phone,
-            expression: "user.phone"
+            value: _vm.member.phone,
+            expression: "member.phone"
           }
         ],
         staticClass: "form-control",
-        domProps: { value: _vm.user.phone },
+        domProps: { value: _vm.member.phone },
         on: {
           input: function($event) {
             if ($event.target.composing) {
               return
             }
-            _vm.$set(_vm.user, "phone", $event.target.value)
+            _vm.$set(_vm.member, "phone", $event.target.value)
           }
         }
       }),
