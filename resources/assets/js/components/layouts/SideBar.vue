@@ -5,7 +5,6 @@
         <li v-for="item in sideBarMenus" :key="item.name">
           <a :href="item.path"
             class="sidebar-link"
-            @click="toggleMenuItem(item)"
             v-if="item.path">
             <i class="sidebar-menu-item-icon" :class="item.icon"></i>
             {{ item.title }}
@@ -13,7 +12,6 @@
           <a href="#"
              @click.prevent="toggleMenuItem(item)"
              class="sidebar-link"
-             :class="{expanded: item.expanded}"
              v-else>
             <i class="sidebar-menu-item-icon" :class="item.icon"></i>
             {{ item.title }}
@@ -45,109 +43,156 @@
 import Expanding from 'vue-bulma-expanding/src/Expanding'
 
 export default {
-  methods: {
-    toggleMenuItem (item) {
-      alert('123');
-      console.log(item);
-      if (item.children) {
-        this.expand({   // TODO: check default prop
-          menuItem: item,
-          expand: !item.expanded
-        })
-      }
-    }
-  },
   data () {
     return {
-      expand: false,
       sideBarMenus: [
         {
-          "icon": "fas fa-tachometer-alt fa-lg",
+          "icon": "fas fa-database fa-lg",
           "path": "/dashboard",
           "title": "總覽"
         },
         {
-          "icon": "fas fa-user fa-lg",
-          "path": "/members_management",
+          "icon": "fas fa-address-book fa-lg",
+          "path": "/members",
           "title": "人員管理"
         },
         {
-          "icon": "fas fa-user fa-lg",
+          "icon": "fas fa-building fa-lg",
           "title": "組織管理",
-          "item.expanded": false,
+          "expanded": false,
           "children": [
             {
-              "path": "/organization/basic",
+              "path": "/compony/basic",
               "title": "組織基本資料"
             },
             {
-              "path": "/organization/department",
+              "path": "/compony/department",
               "title": "部門管理"
             },
             {
-              "path": "/organization/plan",
+              "path": "/compony/plan",
               "title": "方案管理"
             },
             {
-              "path": "/organization/files",
+              "path": "/compony/files",
               "title": "檔案管理"
             }
           ]
         },
         {
-          "icon": "fa fa-user fa-lg",
-          "path": "/person",
+          "icon": "fas fa-user fa-lg",
           "title": "個人層級",
-          // "children": [
-          //   {
-          //     "path": "/person/basic",
-          //     "title": "組織基本資料"
-          //   },
-          //   {
-          //     "path": "/person/department",
-          //     "title": "部門管理"
-          //   },
-          //   {
-          //     "path": "/person/plan",
-          //     "title": "方案管理"
-          //   },
-          //   {
-          //     "path": "/person/files",
-          //     "title": "檔案管理"
-          //   }
-          // ]
+          "expanded": false,
+          "children": [
+            {
+              "path": "/person/basic",
+              "title": "基本資料"
+            },
+            {
+              "path": "/person/sis",
+              "title": "支持強度強表(SIS)"
+            },
+            {
+              "path": "/person/mysupport_plan",
+              "title": "我的支持計畫"
+            },
+            {
+              "path": "/person/support_plan",
+              "title": "個別化支持計畫"
+            },
+            {
+              "path": "/person/metting_record",
+              "title": "ISP會議記錄"
+            },
+            {
+              "path": "/person/pos",
+              "title": "個人成果量表(POS)"
+            },
+            {
+              "path": "/person/community_skill",
+              "title": "社區生活技能評量表"
+            },
+            {
+              "path": "/person/statistic",
+              "title": "統計分析" 
+            }
+          ]
         },
+        {
+          "icon": "fas fa-users fa-lg",
+          "title": "團隊層級",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/team/basic",
+              "title": "團隊管理"
+            },
+            {
+              "path": "/team/person_team",
+              "title": "個人與團隊特質量表"
+            },
+            {
+              "path": "/team/develop_plan",
+              "title": "發展計畫"
+            },
+            {
+              "path": "/team/cfi_statistic",
+              "title": "CFI統計"
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-sitemap fa-lg",
+          "title": "組織層級",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/organization/oees",
+              "title": "組織效益效率量表(OEES)"
+            },
+            {
+              "path": "/organization/develop_plan",
+              "title": "發展及改善計畫"
+            },
+            {
+              "path": "/organization/statistic",
+              "title": "統計分析"
+            }
+          ]
+        },
+        {
+          "icon": "fas fa-briefcase",
+          "title": "工作管理",
+          "expanded": false,
+          "children": [
+            {
+              "path": "/person/management",
+              "title": "個人層級"
+            },
+            {
+              "path": "/team/management",
+              "title": "團隊層級"
+            },
+            {
+              "path": "/organization/management",
+              "title": "組織層級"
+            }
+          ]
+        }
       ]
     }
   },
   components: {
     Expanding
   },
-  
-    // computed: {
-    //   ...mapGetters({
-    //     'menuItems': 'menuItems'
-    //   })
-    // },
-    // watch: {
-    //   $route (route) {
-    //     let parent = _findMatchingParentMenuItem.call(this, route.name) || {}
-    //     this.menuItems.forEach((item) => {
-    //       this.expand({
-    //         menuItem: item,
-    //         expand: parent.name === item.name
-    //       })
-    //     })
-    //   }
-    // },
+  methods: {
+    toggleMenuItem (item) {
+      if (item.children) {
+        item.expanded = !item.expanded;
+      }
+    }
   }
-  // function _findMatchingParentMenuItem (itemName) {
-  //   let parentItem
-  //   this.menuItems.forEach((item) => {
-  //     parentItem = (item.children && item.children.find((child) => child.name === itemName)) ? item : parentItem
-  //   })
-  //   return parentItem
-  // }
+}
 </script>
 
 <style lang="scss">
@@ -155,6 +200,7 @@ export default {
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
+
 .sidebar {
   @include media-breakpoint-down(md) {
     top: $sidebar-mobile-top;
@@ -163,15 +209,12 @@ export default {
     z-index: $sidebar-mobile-z-index;
   }
   height: $sidebar-viewport-height;
-  // .vuestic-scrollbar {
-    // height: 100%;
-    .scrollbar-wrapper {
-      box-shadow: $sidebar-box-shadow;
-    }
-    .scrollbar-content {
-      background: $sidebar-bg;
-    }
-  // }
+  .scrollbar-wrapper {
+    box-shadow: $sidebar-box-shadow;
+  }
+  .scrollbar-content {
+    background: $sidebar-bg;
+  }
   position: absolute;
   width: $sidebar-width;
   top: $sidebar-top;
