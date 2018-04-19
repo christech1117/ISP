@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([3],{
 
 /***/ 1:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2539,10 +2539,9 @@ module.exports = __webpack_require__(24);
 /***/ }),
 
 /***/ 24:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__(7);
+__webpack_require__(5);
 // import SideBar from './components/layouts/SideBar';
 
 var app = new Vue({
@@ -2552,13 +2551,13 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 7:
+/***/ 5:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-window._ = __webpack_require__(10);
+window._ = __webpack_require__(9);
 window.Popper = __webpack_require__(1).default;
-window.Vue = __webpack_require__(11);
+window.Vue = __webpack_require__(10);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
@@ -2568,7 +2567,7 @@ window.Vue = __webpack_require__(11);
 try {
   window.$ = window.jQuery = __webpack_require__(3);
 
-  __webpack_require__(8);
+  __webpack_require__(6);
 } catch (e) {}
 
 /**
@@ -2577,7 +2576,7 @@ try {
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-window.axios = __webpack_require__(12);
+window.axios = __webpack_require__(11);
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
@@ -2614,7 +2613,7 @@ if (token) {
 
 /***/ }),
 
-/***/ 8:
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
