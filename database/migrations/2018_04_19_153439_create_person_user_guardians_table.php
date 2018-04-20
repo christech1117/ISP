@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserGuardiansTable extends Migration
+class CreatePersonUserGuardiansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserGuardiansTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_guardians', function (Blueprint $table) {
+        Schema::create('person_user_guardians', function (Blueprint $table) {
             $table->increments('guardian_id');
             $table->integer('user_id')->unique()->comment('病人編號');
             $table->string('name')->comment('姓名');
@@ -33,6 +33,6 @@ class CreateUserGuardiansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_guardians');
+        Schema::dropIfExists('person_user_guardians');
     }
 }

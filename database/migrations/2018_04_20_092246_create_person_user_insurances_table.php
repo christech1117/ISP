@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateRolesTable extends Migration
+class CreatePersonUserInsurancesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('roles', function (Blueprint $table) {
-            $table->increments('role_id');
-            $table->string('title')->comment('角色名稱');
-            $table->string('right')->comment('權限');
+        Schema::create('person_user_insurances', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id')->comment('人員編號');
+            $table->integer('insurance_id')->comment('保險編號');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('roles');
+        Schema::dropIfExists('person_user_insurances');
     }
 }

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Guardian extends Model
+class PersonCustomLanguage extends Model
 {
     //
 }

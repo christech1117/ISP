@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserBasicsTable extends Migration
+class CreatePersonUserBasicsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateUserBasicsTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_basics', function (Blueprint $table) {
+        Schema::create('person_user_basics', function (Blueprint $table) {
             $table->increments('user_id');
             $table->string('name')->comment('姓名');
             $table->string('birthday')->comment('出生日期');
@@ -27,9 +27,12 @@ class CreateUserBasicsTable extends Migration
             $table->integer('marriage_memo')->nullable()->comment('婚姻狀況(子/女幾人)');
             $table->string('house_adress')->comment('戶籍地址');
             $table->string('contact_adress')->comment('通訊地址');
+            $table->string('family_img')->comment('家系圖暨生態圖');
             $table->string('height')->comment('身高');
             $table->string('weight')->comment('體重');
             $table->string('blood')->comment('血型');
+            $table->string('care_people')->comment('主要照顧者');
+            $table->string('decided_people')->comment('主要決策者');
             $table->timestamps();
         });
     }
@@ -41,6 +44,6 @@ class CreateUserBasicsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_basics');
+        Schema::dropIfExists('person_user_basics');
     }
 }

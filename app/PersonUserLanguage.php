@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserInsurance extends Model
+class PersonUserLanguage extends Model
 {
     //
 }
