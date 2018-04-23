@@ -33,6 +33,7 @@ class CreatePersonUserBasicsTable extends Migration
             $table->string('blood')->comment('血型');
             $table->string('care_people')->comment('主要照顧者');
             $table->string('decided_people')->comment('主要決策者');
+            $table->string('education')->comment('教育程度');
             $table->timestamps();
         });
     }

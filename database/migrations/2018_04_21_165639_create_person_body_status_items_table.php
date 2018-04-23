@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonUserLanguagesTable extends Migration
+class CreatePersonBodyStatusItemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreatePersonUserLanguagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('person_user_languages', function (Blueprint $table) {
+        Schema::create('person_body_status_items', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id')->comment('病人編號');
-            $table->integer('custom_id')->comment('慣用語言編號');
+            $table->enum('type', ['disease', 'notice'])->comment('疾病or注意事項');
+            $table->string('title')->comment('項目名稱');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreatePersonUserLanguagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('person_user_languages');
+        Schema::dropIfExists('person_body_status_items');
     }
 }

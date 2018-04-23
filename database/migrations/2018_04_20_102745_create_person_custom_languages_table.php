@@ -16,7 +16,6 @@ class CreatePersonCustomLanguagesTable extends Migration
         Schema::create('person_custom_languages', function (Blueprint $table) {
             $table->increments('custom_id');
             $table->string('title')->comment('慣用語言');
-            $table->string('title_memo')->comment('慣用語言其他內容');
             $table->timestamps();
         });
     }
