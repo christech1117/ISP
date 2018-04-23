@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('hello');
 });
 
-Route::get('/organization/users', 'UsersInfoController@index');
+Route::get('/organization/member', 'MemberInfoController@index');

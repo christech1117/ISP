@@ -62,19 +62,19 @@ export default {
           "expanded": false,
           "children": [
             {
-              "path": "/compony/basic",
+              "path": "/company/basic",
               "title": "組織基本資料"
             },
             {
-              "path": "/compony/department",
+              "path": "/company/department",
               "title": "部門管理"
             },
             {
-              "path": "/compony/plan",
+              "path": "/company/plan",
               "title": "方案管理"
             },
             {
-              "path": "/compony/files",
+              "path": "/company/files",
               "title": "檔案管理"
             }
           ]
