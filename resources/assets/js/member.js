@@ -1,8 +1,8 @@
 require('./bootstrap.js');
 import SideBar from './components/layouts/SideBar';
-import UsersInfo from './components/UsersInfo';
+import Member from './components/Member';
 
 new Vue({
     el: '#app',
-    components: { SideBar, UsersInfo }
+    components: { SideBar, Member }
 })

@@ -17,8 +17,8 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
-Route::get('/member', 'MemberInfoController@getUserList');
-Route::get('/member/{id}', 'MemberInfoController@getUserById');
-Route::post('/member', 'MemberInfoController@addUser');
-Route::put('/member/{id}', 'MemberInfoController@updateUser');
-Route::delete('/member/{id}', 'MemberInfoController@deleteUser');
+Route::get('/member', 'MemberController@getUserList');
+Route::get('/member/{id}', 'MemberController@getUserById');
+Route::post('/member', 'MemberController@addUser');
+Route::put('/member/{id}', 'MemberController@updateUser');
+Route::delete('/member/{id}', 'MemberController@deleteUser');

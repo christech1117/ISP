@@ -53,7 +53,7 @@ export default {
         },
         {
           "icon": "fas fa-address-book fa-lg",
-          "path": "/members",
+          "path": "/member",
           "title": "人員管理"
         },
         {

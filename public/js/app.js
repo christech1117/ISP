@@ -1,6 +1,6 @@
 webpackJsonp([3],{
 
-/***/ 1:
+/***/ 2:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2526,22 +2526,22 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(2)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
 
 /***/ }),
 
-/***/ 23:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(24);
+module.exports = __webpack_require__(34);
 
 
 /***/ }),
 
-/***/ 24:
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
+__webpack_require__(7);
 // import SideBar from './components/layouts/SideBar';
 
 var app = new Vue({
@@ -2551,12 +2551,12 @@ var app = new Vue({
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /***/ (function(module, exports, __webpack_require__) {
 
 
 window._ = __webpack_require__(9);
-window.Popper = __webpack_require__(1).default;
+window.Popper = __webpack_require__(2).default;
 window.Vue = __webpack_require__(10);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -2565,9 +2565,9 @@ window.Vue = __webpack_require__(10);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(3);
+  window.$ = window.jQuery = __webpack_require__(6);
 
-  __webpack_require__(6);
+  __webpack_require__(8);
 } catch (e) {}
 
 /**
@@ -2613,7 +2613,7 @@ if (token) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 8:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -2622,7 +2622,7 @@ if (token) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-	 true ? factory(exports, __webpack_require__(3), __webpack_require__(1)) :
+	 true ? factory(exports, __webpack_require__(6), __webpack_require__(2)) :
 	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
 	(factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
@@ -6514,4 +6514,4 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 /***/ })
 
-},[23]);
+},[33]);

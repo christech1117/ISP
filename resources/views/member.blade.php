@@ -1,8 +1,8 @@
 @extends('layouts.default')
 @section('title', '人員管理')
 @section('content')
-    <users-info></users-info>
+    <member></member>
 @endsection
 @section('script')
-    <script src="/js/usersInfo.js"></script>
+    <script src="/js/member.js"></script>
 @endsection
