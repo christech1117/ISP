@@ -19,3 +19,7 @@ Route::get('/dashboard', function () {
 Route::get('/member', function () {
     return view('member');
 });
+
+Route::get('/company/basic', function () {
+    return view('/company/basic');
+});

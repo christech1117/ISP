@@ -26,7 +26,6 @@ class MemberController extends Controller
     function addMember(Request $request)
     {
         $member = new Member;
-        $member->member_id = $request->input('member_id', '1');
         $member->name = $request->input('name', '測試人員02');
         $member->avatar = $request->input('avatar', 'http://img');
         $member->work_start_date = $request->input('work_start_date', '2018-04-11');
@@ -38,7 +37,7 @@ class MemberController extends Controller
         $member->work_title = $request->input('work_title', '主任');
         $member->plan_id = $request->input('plan_id', '1');
         $member->team_id = $request->input('team_id', '1');
-        $member->role = $request->input('role', '角色');
+        $member->role_id = $request->input('role_id', '1');
         $member->approve_status = $request->input('approve_status', '審核狀態');
         $member->income = $request->input('income', 'look');
     

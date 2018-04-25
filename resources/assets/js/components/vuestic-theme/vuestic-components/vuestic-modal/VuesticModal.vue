@@ -20,8 +20,8 @@
               <!--Footer-->
               <div class="modal-footer">
                 <slot name="footer">
-                  <button type="button" :class="okClass" @click="ok" :disabled="okDisabled">{{okText}}</button>
-                  <button type="button" :class="cancelClass" @click="cancel" :disabled="cancelDisabled">{{cancelText}}</button>
+                  <button type="button" class="btn btn-sm btn-warning" :class="okClass" @click="ok" :disabled="okDisabled">{{okText}}</button>
+                  <button type="button" class="btn btn-sm btn-pale" :class="cancelClass" @click="cancel" :disabled="cancelDisabled">{{cancelText}}</button>
                 </slot>
               </div>
             </div>
@@ -147,32 +147,25 @@
 
   .vuestic-modal {
     height: 0;
-    width: 0
-;
+    width: 0;
     // For Transitioning
     .modal {
       display: block;
-    
-}
+    }
     .modal-dialog, .modal-backdrop {
       transition: all .5s ease;
-    
-}
+    }
     .modal-enter .modal-dialog, .modal-leave-active .modal-dialog {
       opacity: 0;
       transform: translateY(-30%);
-    
-}
+    }
     .modal-enter .modal-backdrop, .modal-leave-active .modal-backdrop {
       opacity: 0;
-    
-}
+    }
     .modal-backdrop {
       opacity: 0.5;
-    
-}
+    }
     //Modal style
-s
     .modal-header {
       height: $modal-header-height;
       padding: $modal-header-padding-y $modal-header-padding-x;
@@ -180,12 +173,14 @@ s
       font-size: $font-size-larger;
       display: flex;
       align-items: center;
-    
-}
+      font-weight: bold;
+      background-color: $theme-orange;
+      border-radius: 0;
+      color: $theme-brown;
+    }
     .modal-content {
       border-radius: $modal-content-border-radius;
-    
-}
+    }
     .modal-footer {
       justify-content: center;
       padding: 0 $modal-inner-padding;
@@ -194,8 +189,7 @@ s
       .btn {
         margin: 0 $modal-footer-btns-margin-x $modal-footer-btns-padding-bottom $modal-footer-btns-margin-x;
       }
-    
-}
+    }
     .modal-dialog {
       box-shadow: $modal-content-box-shadow-sm-up;
     }

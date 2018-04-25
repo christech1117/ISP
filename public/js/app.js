@@ -1,6 +1,28 @@
-webpackJsonp([3],{
+webpackJsonp([4],{
 
-/***/ 2:
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(34);
+
+
+/***/ }),
+
+/***/ 34:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__(7);
+// import SideBar from './components/layouts/SideBar';
+
+var app = new Vue({
+    el: '#app'
+    // components: { SideBar }
+});
+
+/***/ }),
+
+/***/ 4:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2526,28 +2548,7 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(5)))
-
-/***/ }),
-
-/***/ 33:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(34);
-
-
-/***/ }),
-
-/***/ 34:
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(7);
-// import SideBar from './components/layouts/SideBar';
-
-var app = new Vue({
-    el: '#app'
-    // components: { SideBar }
-});
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
 
 /***/ }),
 
@@ -2556,7 +2557,7 @@ var app = new Vue({
 
 
 window._ = __webpack_require__(9);
-window.Popper = __webpack_require__(2).default;
+window.Popper = __webpack_require__(4).default;
 window.Vue = __webpack_require__(10);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -2565,7 +2566,7 @@ window.Vue = __webpack_require__(10);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(6);
+  window.$ = window.jQuery = __webpack_require__(5);
 
   __webpack_require__(8);
 } catch (e) {}
@@ -2622,7 +2623,7 @@ if (token) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-	 true ? factory(exports, __webpack_require__(6), __webpack_require__(2)) :
+	 true ? factory(exports, __webpack_require__(5), __webpack_require__(4)) :
 	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
 	(factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
