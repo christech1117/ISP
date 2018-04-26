@@ -18,6 +18,7 @@ const { mix } = require('laravel-mix');
 mix.js('resources/assets/js/fontawesome-all.js', 'public/js')
    .js('resources/assets/js/app.js', 'public/js')
    .js('resources/assets/js/hello.js', 'public/js')
-   .js('resources/assets/js/usersInfo.js', 'public/js')
+   .js('resources/assets/js/member.js', 'public/js')
+   .js('resources/assets/js/company/basic.js', 'public/js')
    .extract(['lodash', 'jquery', 'axios', 'vue'])
    .sass('resources/assets/sass/app.scss', 'public/css');

@@ -15,7 +15,7 @@ class CreatePersonFamilyStatusesTable extends Migration
     {
         Schema::create('person_family_statuses', function (Blueprint $table) {
             $table->increments('fam_status_id');
-            $table->increments('user_id')->comment('病人編號');
+            $table->integer('user_id')->comment('病人編號');
             $table->enum('live_house', ['room', 'suite', 'apartment', 'bungalow', 'villa', 'other'])->comment('住所型態: room(雅房), suite(套房), apartment(公寓), bungalow(平房), villa(透天獨棟)');
             $table->string('live_house_memo')->nullable()->comment('住所型態其他內容');
             $table->enum('live_type', ['rent', 'own', 'borrow'])->comment('住所類型: rent(租賃), own(自有), borrow(借住)');

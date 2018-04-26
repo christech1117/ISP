@@ -11,8 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/dashboard', function () {
     return view('hello');
 });
 
-Route::get('/organization/member', 'MemberInfoController@index');
+// Route::get('/organization/member', 'MemberController@index');
+Route::get('/member', function () {
+    return view('member');
+});
+
+Route::get('/company/basic', function () {
+    return view('/company/basic');
+});
