@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <div id="member" class="content">
     <vuestic-widget class="modals-list larger-padding" :headerText="'人員管理'">
       <div class="top-tool">
         <button class="btn btn-warning btn-with-icon rounded-icon" @click="showModal()">
@@ -163,28 +163,22 @@
           </tr>
         </tbody>
       </table>
+<!-- <form id="form">
+<div :class="{ 'has-warning': titleWarning }" class="form-group"></div>
+<label class="control-label"></label>姓名<span v-if="titleWarning">不能空白</span>
+<input v-model="member.name" class="form-control"/>
+<div :class="{ 'has-warning': bodyWarning }" class="form-group"></div>
+<label class="control-label"></label>手機<span v-if="bodyWarning">不能空白</span>
+<textarea v-model="member.phone" class="form-control"></textarea>
+<div class="form-group"></div>
+<div v-if="isSave">
+<button @click.prevent="save" class="btn btn-sm btn-success">儲存</button>
+<button @click.prevent="cancel" class="btn btn-sm btn-secondary">取消</button>
+</div>
+<button v-else="" @click.prevent="publish" class="btn btn-sm btn-warning">發佈</button>
+</form> -->
     </vuestic-widget>
   </div>
-<!-- //-   i.fas.fa-edit.fa-lg
-//-   i.fas.fa-trash.fa-lg
-//-   button.btn.btn-xs.btn-primary(@click='modify(member)') 修改
-//-   button.btn.btn-xs.btn-danger(@click='remove(member.id)') 刪除
-//- form#form
-//-     .form-group(:class="{ 'has-warning': titleWarning }")
-//-     label.control-label
-//-     | 姓名
-//-     span(v-if='titleWarning') 不能空白
-//-     input.form-control(v-model='member.name')
-//-     .form-group(:class="{ 'has-warning': bodyWarning }")
-//-     label.control-label
-//-     | 手機
-//-     span(v-if='bodyWarning') 不能空白
-//-     textarea.form-control(v-model='member.phone')
-//-     .form-group
-//-     div(v-if='isSave')
-//-         button.btn.btn-sm.btn-success(@click.prevent='save') 儲存
-//-         button.btn.btn-sm.btn-secondary(@click.prevent='cancel') 取消
-//-     button.btn.btn-sm.btn-warning(v-else='', @click.prevent='publish') 發佈 -->
 </template>
 <script>
 import Modal from './vuestic-theme/vuestic-components/vuestic-modal/VuesticModal'

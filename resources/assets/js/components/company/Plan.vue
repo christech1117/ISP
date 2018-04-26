@@ -55,119 +55,67 @@
           </tr>
         </table>
       </modal>
-      <table border="1" class="table member-modal text-center">
-        <tr>
-          <th>組織\單位名稱</th>
-          <td colspan="3"></td>
-        </tr>
-        <tr>
-          <th>聯絡人姓名</th>
-          <td> </td>
-          <th>電話</th>
-          <td> </td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <td colspan="3"></td>
-        </tr>
-        <tr colspan="4">
-          <th>服務地區類別</th>
-          <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'都市'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+      <div class="sets-list row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'郊區'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'綜合'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-          </td>
-        </tr>
-        <tr>
-          <th>服務人數</th>
-          <td> </td>
-          <th>全職人員數量</th>
-          <td> </td>
-        </tr>
-        <tr>
-          <th>服務對方類型</th>
-          <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'智能/發展障礙'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'高齡'" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'精神/行為健康'" :id="'checkbox3'" v-model="checkboxTwoModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'特殊教育'" :id="'checkbox4'" v-model="checkboxTwoModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'其他'" :id="'checkbox5'" v-model="checkboxTwoModel"></vuestic-checkbox>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
             </div>
-          </td>
-        </tr>
-        <tr>
-          <th>服務對象年齡層百分比</th>
-          <td colspan="3">
-            <p>兒童 0 ~ 12 歲：</p>
-            <p>青少年 13 ~ 18 歲：</p>
-            <p>高齡 65+ 歲：</p>
-            <p>成人 19 ~ 65 歲：</p>
-          </td>
-        </tr>
-        <tr>
-          <th>年度預算</th>
-          <td colspan="3"></td>
-        </tr>
-        <tr>
-          <th>組織服務內容</th>
-          <td colspan="3">
-            <ol>
-              <li>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'居住 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'大型機構(&gt;200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'小型機構(30人~200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'夜間型住宿機構(&lt;29人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'社區居住(&lt;6人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-              </li>
-              <li>
-                <vuestic-checkbox :label="'日間活動'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-              <li>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'就業 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'庇護性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'支持性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-              </li>
-              <li>
-                <vuestic-checkbox :label="'教育(學校)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-              <li>
-                <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-            </ol>
-          </td>
-        </tr>
-      </table>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
+            </div>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
+            </div>
+            <div class="small-set col-lg-3">
+              <div class="set-content">
+                <tree-view-basic-preview/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </vuestic-widget>
   </div>
 </template>
