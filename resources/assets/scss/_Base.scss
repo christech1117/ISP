@@ -1,0 +1,64 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  font-family: Arial, \5FAE\8EDF\6B63\9ED1\9AD4, "Microsoft JhengHei", "PingFangTC-Regular";
+}
+
+//Util classes
+.ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.widget-viewport-height {
+  height: $widget-viewport-height;
+}
+
+.none {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]) {
+  color: $white;
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]):hover {
+  color: $white;
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]):focus {
+  color: $white;
+  cursor: pointer;
+}
+
+.content {
+  padding: 150px 50px 100px 300px;
+}
+.top-tool {
+  margin-bottom: 10px;
+  text-align: right;
+}
+
+.member-modal th {
+  width: 140px;
+  text-align: center;
+}
+.member-modal td {
+  width: 300px;
+  text-align: left;
+}
+.d-inline-block {
+  margin-right: 10px;
+}

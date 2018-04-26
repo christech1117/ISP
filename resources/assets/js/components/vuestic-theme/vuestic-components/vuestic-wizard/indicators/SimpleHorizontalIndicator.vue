@@ -30,7 +30,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../../sass/_variables.scss";
+  @import "../../../../scss/_variables.scss";
   @import "~bootstrap/scss/functions";
   @import "~bootstrap/scss/variables";
   @import "~bootstrap/scss/mixins/breakpoints";

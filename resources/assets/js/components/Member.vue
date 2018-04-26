@@ -1,123 +1,171 @@
-<template lang="pug">
-.content
-  vuestic-widget.modals-list.larger-padding
-    button.btn.btn-sm.btn-danger(@click='showModal()')
-      | 新增
-    modal(:show.sync='show', v-bind:large='true', v-bind:force='true', ref='modal', :cancelText="'取消'", :okText="'新增'")
-      div(slot='title') 新增人員
-      table.table.member-modal(border="1")
-        tr
-          th 姓名
-          td 
-          th 照片
-          td 
-        tr
-          th 就職日期
-          td 
-          th 工作狀態
-          td
-            .row
-              .col-md-4
-                vuestic-checkbox(:label="'在職' | translate", :id="'checkbox1'", v-model='checkboxOneModel')
-              .col-md-4
-                vuestic-checkbox(:label="'離職' | translate", :id="'checkbox2'", v-model='checkboxTwoModel')
-        tr
-          th 電話
-          td
-          th E-mail
-          td 
-        tr
-          th 聯絡住址
-          td(colspan="3")
-        tr
-          th 部門或單位
-          td 
-          th 職稱
-          td 
-        tr
-          th 方案計畫名稱
-          td(colspan="3")
-        tr
-          th 所屬團隊
-          td(colspan="3")
-        tr
-          th(colspan="4") 權限
-        tr
-          th 角色
-          td(colspan="3")
-        tr
-          th 審核
-          td 
-          th 個人收入
-          td 
-    modal(:show.sync='show', v-bind:large='true', v-bind:force='true', ref='editModal', :cancelclass="'custom-class'", :cancelText="'取消'", :okText="'儲存'")
-      div(slot='title') 編輯人員
-      table.table.member-modal(border="1")
-        tr
-          th 姓名
-          td 
-          th 照片
-          td 
-        tr
-          th 就職日期
-          td 
-          th 工作狀態
-          td 
-        tr
-          th 電話
-          td
-          th E-mail
-          td 
-        tr
-          th 聯絡住址
-          td(colspan="3")
-        tr
-          th 部門或單位
-          td 
-          th 職稱
-          td 
-        tr
-          th 方案計畫名稱
-          td(colspan="3")
-        tr
-          th 所屬團隊
-          td(colspan="3")
-        tr
-          th(colspan="4") 權限
-        tr
-          th 角色
-          td(colspan="3")
-        tr
-          th 審核
-          td 
-          th 個人收入
-          td 
-    table.table.table-striped.table-hover.first-td-padding.text-center
-      thead
-        tr
-          th(scope='col') 姓名
-          th(scope='col') 照片
-          th(scope='col') 部門
-          th(scope='col') 職稱
-          th(scope='col') 計畫
-          th(scope='col') 團隊
-          th(scope='col') 工作狀態
-          th(scope='col') 就職日期
-          th(scope='col') 
-      tbody
-        tr(v-for="member in members" :key="member.id" @click='showEditModal()')
-          td {{ member.name }}
-          td {{ member.avatar }}
-          td {{ member.depart_id }}
-          td {{ member.work_title }}
-          td {{ member.plan_id }}
-          td {{ member.team_id }}
-          td {{ member.work_status }}
-          td {{ member.work_start_date }}
-          td
-            span(@click='remove(member.id)')
-            i.fas.fa-times
-//-   i.fas.fa-edit.fa-lg
+<template>
+  <div class="content">
+    <vuestic-widget class="modals-list larger-padding" :headerText="'人員管理'">
+      <div class="top-tool">
+        <button class="btn btn-warning btn-with-icon rounded-icon" @click="showModal()">
+          <div class="btn-with-icon-content">
+            <i class="fas fa-plus"></i>
+          </div>
+        </button>
+      </div>
+      <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="modal" :cancelText="'取消'" :okText="'新增'">
+        <div slot="title">新增人員</div>
+        <table border="1" class="table member-modal">
+          <tr>
+            <th>姓名</th>
+            <td> </td>
+            <th>照片</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>就職日期</th>
+            <td> </td>
+            <th>工作狀態</th>
+            <td>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'在職' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'離職' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td></td>
+            <th>E-mail</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>聯絡住址</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>部門或單位</th>
+            <td> </td>
+            <th>職稱</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>方案計畫名稱</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>所屬團隊</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th colspan="4">權限</th>
+          </tr>
+          <tr>
+            <th>角色</th>
+            <td colspan="3">
+              <div class="d-inline-block">
+                <!-- <vuestic-checkbox :label="'組織管理員' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox> -->
+                  <div class="radio abc-radio abc-radio-primary">
+                    <input type="radio" name="radio1" id="radio1" value="option1" checked>
+                    <label for="radio1">
+                          <span class="abc-label-text">Radio</span>
+                    </label>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>審核</th>
+            <td> </td>
+            <th>個人收入</th>
+            <td> </td>
+          </tr>
+        </table>
+      </modal>
+      <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="editModal" :cancelclass="'custom-class'" :cancelText="'取消'" :okText="'儲存'">
+        <div slot="title">編輯人員</div>
+        <table border="1" class="table member-modal">
+          <tr>
+            <th>姓名</th>
+            <td> </td>
+            <th>照片</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>就職日期</th>
+            <td> </td>
+            <th>工作狀態</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td></td>
+            <th>E-mail</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>聯絡住址</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>部門或單位</th>
+            <td> </td>
+            <th>職稱</th>
+            <td> </td>
+          </tr>
+          <tr>
+            <th>方案計畫名稱</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>所屬團隊</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th colspan="4">權限</th>
+          </tr>
+          <tr>
+            <th>角色</th>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>審核</th>
+            <td> </td>
+            <th>個人收入</th>
+            <td> </td>
+          </tr>
+        </table>
+      </modal>
+      <table class="table table-striped table-hover first-td-padding text-center">
+        <thead>
+          <tr>
+            <th scope="col">姓名</th>
+            <th scope="col">照片</th>
+            <th scope="col">部門</th>
+            <th scope="col">職稱</th>
+            <th scope="col">計畫</th>
+            <th scope="col">團隊</th>
+            <th scope="col">工作狀態</th>
+            <th scope="col">就職日期</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="member in members" :key="member.id" @click="showEditModal()">
+            <td>{{ member.name }}</td>
+            <td>{{ member.avatar }}</td>
+            <td>{{ member.depart_id }}</td>
+            <td>{{ member.work_title }}</td>
+            <td>{{ member.plan_id }}</td>
+            <td>{{ member.team_id }}</td>
+            <td>{{ member.work_status }}</td>
+            <td>{{ member.work_start_date }}</td>
+            <td>
+              <i class="fas fa-times" @click="remove(member.member_id)"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </vuestic-widget>
+  </div>
+<!-- //-   i.fas.fa-edit.fa-lg
 //-   i.fas.fa-trash.fa-lg
 //-   button.btn.btn-xs.btn-primary(@click='modify(member)') 修改
 //-   button.btn.btn-xs.btn-danger(@click='remove(member.id)') 刪除
@@ -136,7 +184,7 @@
 //-     div(v-if='isSave')
 //-         button.btn.btn-sm.btn-success(@click.prevent='save') 儲存
 //-         button.btn.btn-sm.btn-secondary(@click.prevent='cancel') 取消
-//-     button.btn.btn-sm.btn-warning(v-else='', @click.prevent='publish') 發佈
+//-     button.btn.btn-sm.btn-warning(v-else='', @click.prevent='publish') 發佈 -->
 </template>
 <script>
 import Modal from './vuestic-theme/vuestic-components/vuestic-modal/VuesticModal'
@@ -227,15 +275,15 @@ export default {
       this.member = {id: null, name: '', phone: ''};
       this.isSave = false;
     },
-    remove(id) {
+    remove(member_id) {
       let self = this;
-      axios.delete('/api/member/' + id)
+      axios.delete('/api/member/' + member_id)
            .then(response => {
               if (response.data['ok']) {
-                  console.log(id);
+                  console.log(member_id);
                   self.init();
                   self.isSave = false;
-                  self.member = {id: null, name: '', phone: ''};
+                  self.member = {member_id: null, name: '', phone: ''};
               }
            })
            .catch(error => {
@@ -248,28 +296,3 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
-@import "../../sass/_variables.scss";
-@import "~bootstrap/scss/mixins/breakpoints";
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-
-.content {
-  padding: 150px 50px 100px 300px;
-}
-.table-striped > tbody > tr:nth-child(2n+1), .table-striped > tbody > tr:nth-child(2n+1) {
-  background-color: $light-orange;
-}
-.table-striped > tbody > tr {
-  &:hover {
-    background-color: $theme-orange;
-  }
-}
-.member-modal th {
-  width: 140px;
-  text-align: center;
-}
-.member-modal td {
-  width: 300px;
-}
-</style>

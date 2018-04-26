@@ -149,7 +149,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../../sass/_variables.scss";
+  @import "../../../scss/_variables.scss";
 
   $wizard-body-vl-step-h-padding: 7%;
   $wizard-indicator-vl-width: 20rem;
