@@ -1,6 +1,14 @@
 #department {
-  .member-modal th {
-    width: 200px;
-    text-align: center;
+  .day, .job {
+    th {
+      width: 50px;
+      text-align: center;
+    }
+  }
+  .live {
+    th {
+      width: 230px;
+      text-align: center;
+    }
   }
 }

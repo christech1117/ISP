@@ -10,7 +10,7 @@
       </div>
       <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="modal" :cancelText="'取消'" :okText="'新增'">
         <div slot="title">新增方案</div>
-        <table border="1" class="table member-modal">
+        <table border="1" class="table">
           <tr>
             <th>方案計畫名稱</th>
             <td colspan="3"></td>
@@ -60,7 +60,12 @@
           <div class="row">
             <div class="small-set col-lg-3">
               <div class="set-content">
-                <tree-view-basic-preview/>
+                <div class="set-title">
+                  <h3>ＸＸＸ計畫</h3>
+                </div>
+                <div class="set-body"></div>
+                  <p>服務據點：ＸＸＸ成辦人</p>
+                  <p>服務人數：5人</p>
               </div>
             </div>
             <div class="small-set col-lg-3">

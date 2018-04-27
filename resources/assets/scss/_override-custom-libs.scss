@@ -1,12 +1,9 @@
 .abc-checkbox, .abc-radio {
-  margin-bottom: 20px;
-
   label {
     .abc-label-text {
       display: inline-block;
       position: relative;
       top: 2px;
-      padding-left: 13px;
     }
 
     &::before{
@@ -46,11 +43,11 @@
     }
 
 
-    &:checked + label::after{
-      font-family: "Ionicons";
-      content: "\F2BC";
-      font-size: 15px;
-    }
+    // &:checked + label::after{
+    //   font-family: "Ionicons";
+    //   content: "\F2BC";
+    //   font-size: 15px;
+    // }
 
     &:disabled + label{
       opacity: 0.5;

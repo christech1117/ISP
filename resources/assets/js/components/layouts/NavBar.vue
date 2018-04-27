@@ -2,7 +2,7 @@
   <nav class="navbar app-navbar navbar-toggleable-md">
     <div class="navbar-brand-container d-flex align-items-center justify-content-start">
       <router-link class="navbar-brand" to="/dashboard">
-        <i class="i-vuestic"></i>
+        <i class="fab fa-google"></i>
       </router-link>
     </div>
 
@@ -20,7 +20,7 @@
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#"
            @click.prevent="closeMenu">
-          <span class="i-nav-messages notify"></span>
+          <!-- <span class="i-nav-messages notify"></span> -->
         </a>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
@@ -39,7 +39,7 @@
       <div class="col nav-item dropdown navbar-dropdown d-flex align-items-center justify-content-center" v-dropdown>
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#"
            @click.prevent="closeMenu">
-          <span class="i-nav-notification notify"></span>
+          <!-- <span class="i-nav-notification notify"></span> -->
         </a>
         <div class="dropdown-menu">
           <div class="dropdown-menu-content">
@@ -63,7 +63,7 @@
         <a class="nav-link dropdown-toggle d-flex align-items-center justify-content" href="#"
            @click.prevent="closeMenu">
           <span class="avatar-container">
-            <img src="http://i.imgur.com/nfa5itq.png"/>
+            <img src="https://osclass.calinbehtuk.ro/oc-content/themes/vrisko/images/no_user.png"/>
           </span>
         </a>
         <div class="dropdown-menu last">

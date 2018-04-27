@@ -51,21 +51,23 @@ a:not([href]):not([tabindex]):focus {
   text-align: right;
 }
 
-.member-modal th {
-  width: 140px;
-  text-align: center;
-}
-.member-modal td {
-  width: 300px;
-  text-align: left;
-}
-.d-inline-block {
-  margin-right: 10px;
+table {
+  th {
+    width: 140px;
+    text-align: center;
+  }
+  td {
+    width: 300px;
+    text-align: left;
+  }
+  .d-inline-block {
+    margin-right: 10px;
+  }
 }
 
 .sets-list {
   .small-set {
-    @include size(150px);
+    @include size(200px);
     .btn {
       width: 13.75rem;
       padding-left: 0;
@@ -76,6 +78,8 @@ a:not([href]):not([tabindex]):focus {
     margin: 0 0 1.5rem;
     .set-content {
       background-color: $light-gray;
+      border: 1px solid $gray-light;
+      border-radius: 4px;
       height: 100%;
       position: relative;
       > div {
@@ -89,7 +93,12 @@ a:not([href]):not([tabindex]):focus {
           }
         }
       }
+      .set-title {
+        border-bottom: 1px solid $gray-light;
+      }
+      .set-body {
 
+      }
       .overlay {
         padding: 0;
         margin: 0;

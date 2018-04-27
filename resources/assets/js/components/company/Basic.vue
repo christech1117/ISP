@@ -10,7 +10,7 @@
       </div>
       <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="modal" :cancelText="'取消'" :okText="'新增'">
         <div slot="title">新增人員</div>
-        <table border="1" class="table member-modal">
+        <table border="1" class="table">
           <tr>
             <th>組織\單位名稱</th>
             <td colspan="3"></td>
@@ -124,7 +124,7 @@
           </tr>
         </table>
       </modal>
-      <table border="1" class="table member-modal text-center">
+      <table border="1" class="table text-center">
         <tr>
           <th>組織\單位名稱</th>
           <td colspan="3"></td>

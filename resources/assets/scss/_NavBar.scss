@@ -39,6 +39,9 @@
     height: 100%;
     left: $navbar-brand-container-left;
     top: 0;
+    .navbar-brand {
+      color: $theme-orange;
+    }
   }
   .nav-item {
     padding: 0;

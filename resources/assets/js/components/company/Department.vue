@@ -10,28 +10,82 @@
       </div>
       <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="modal" :cancelText="'取消'" :okText="'新增'">
         <div slot="title">新增部門</div>
-        <table border="1" class="table member-modal">
+        <form class="form-inline">
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">選擇服務單位資料類型</label>
+          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" v-model="selected">
+            <option value="day" selected>日間</option>
+            <option value="live">居住</option>
+            <option value="job">就業</option>
+          </select>
+        </form>
+        <table border="1" class="table day" v-if="selected === 'day'">
           <tr>
-            <th>
-              <p>服務類型</p>
-              <!-- <p> -->
-                <div class="dropdown d-inline-flex" v-dropdown>
-                  <button class="btn btn-sm btn-warning dropdown-toggle theme-toggle " type="button" id="dropdownMenuButton"
-                          data-toggle="dropdown">
-                    DROPDOWN
-                    <i class="ion-chevron-down arrow-down"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <div class="dropdown-menu-content">
-                      <a class="dropdown-item" href="#">日間</a>
-                      <a class="dropdown-item" href="#">居住</a>
-                      <a class="dropdown-item" href="#">就業</a>
-                    </div>
-                  </div>
-                </div>
-              <!-- </p> -->
-            </th>
-            <td colspan="7"></td>
+            <th>服務類型</th>
+            <td>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'日間照顧' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'日間活動(含休閒、工作)' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'社區日間作業設施' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'小組工作安置' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'其他' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>單位名稱</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>方案</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>主責人</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>地址</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td></td>
+          </tr>
+        </table>
+        <table border="1" class="table live" v-else-if="selected === 'live'">
+          <tr>
+            <th>服務類型</th>
+            <td colspan="7">
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'大型機構(>200人)' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'小型機構(30人~200人)' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'夜間型住宿機構（<29人）' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'社區居住(<6人)' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'與家人同住' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'自己在外面居住' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'其他' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>單位名稱</th>
@@ -55,13 +109,52 @@
           </tr>
           <tr>
             <th>房舍類型</th>
-            <td colspan="4"></td>
+            <td colspan="4">
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'透天' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'公寓' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'大廈' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'其他' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            </td>
             <th>電梯</th>
-            <td colspan="3"></td>
+            <td colspan="3">
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'有' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'無' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            </td>
           </tr>
           <tr>
             <th>房舍性質</th>
-            <td colspan="4"></td>
+            <td colspan="4">
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'自有' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'租用' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'公部門提供' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'財團法人' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'社團法人' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'其他' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            </td>
             <th>每月租金</th>
             <td colspan="3"></td>
           </tr>
@@ -79,6 +172,48 @@
             <th>房間數</th>
             <td></td>
             <th>床位數</th>
+            <td></td>
+          </tr>
+        </table>
+        <table border="1" class="table job" v-else-if="selected === 'job'">
+          <tr>
+            <th>服務類型</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>單位名稱</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>方案</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>主責人</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>地址</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>電話</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>工作時間</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>工作時數</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>工資</th>
+            <td></td>
+          </tr>
+          <tr>
+            <th>工作內容</th>
             <td></td>
           </tr>
         </table>
@@ -166,6 +301,7 @@ export default {
         name: '',
         phone: ''
       },
+      selected: 'day',
       titleWarning: false,
       bodyWarning: false,
       isSave: false,
