@@ -1,4 +1,4 @@
-webpackJsonp([5],[
+webpackJsonp([6],[
 /* 0 */
 /***/ (function(module, exports) {
 
@@ -550,25 +550,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         "title": "個人層級",
         "expanded": false,
         "children": [{
-          "path": "/person/basic",
+          "path": "/person/personbasic",
           "title": "基本資料"
         }, {
           "path": "/person/sis",
           "title": "支持強度強表(SIS)"
         }, {
-          "path": "/person/mysupport_plan",
+          "path": "/person/mysupportplan",
           "title": "我的支持計畫"
         }, {
-          "path": "/person/support_plan",
+          "path": "/person/supportplan",
           "title": "個別化支持計畫"
         }, {
-          "path": "/person/metting_record",
+          "path": "/person/mettingrecord",
           "title": "ISP會議記錄"
         }, {
           "path": "/person/pos",
           "title": "個人成果量表(POS)"
         }, {
-          "path": "/person/community_skill",
+          "path": "/person/communityskill",
           "title": "社區生活技能評量表"
         }, {
           "path": "/person/statistic",
@@ -1376,7 +1376,20 @@ if (false) {
 }
 
 /***/ }),
-/* 18 */
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3902,22 +3915,9 @@ Popper.Defaults = Defaults;
 /* harmony default export */ __webpack_exports__["default"] = (Popper);
 //# sourceMappingURL=popper.js.map
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(19)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(32)))
 
 /***/ }),
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
 /* 32 */,
 /* 33 */,
 /* 34 */
@@ -3925,7 +3925,7 @@ Popper.Defaults = Defaults;
 
 
 window._ = __webpack_require__(36);
-window.Popper = __webpack_require__(18).default;
+window.Popper = __webpack_require__(31).default;
 window.Vue = __webpack_require__(37);
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -3934,7 +3934,7 @@ window.Vue = __webpack_require__(37);
  */
 
 try {
-  window.$ = window.jQuery = __webpack_require__(20);
+  window.$ = window.jQuery = __webpack_require__(33);
 
   __webpack_require__(35);
 } catch (e) {}
@@ -3990,7 +3990,7 @@ if (token) {
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
   */
 (function (global, factory) {
-	 true ? factory(exports, __webpack_require__(20), __webpack_require__(18)) :
+	 true ? factory(exports, __webpack_require__(33), __webpack_require__(31)) :
 	typeof define === 'function' && define.amd ? define(['exports', 'jquery', 'popper.js'], factory) :
 	(factory((global.bootstrap = {}),global.jQuery,global.Popper));
 }(this, (function (exports,$,Popper) { 'use strict';
