@@ -13,69 +13,149 @@
         <table border="1" class="table">
           <tr>
             <th>姓名</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
             <th>照片</th>
             <td> </td>
           </tr>
           <tr>
             <th>就職日期</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
             <th>工作狀態</th>
             <td>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'在職' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">就職</label>
               </div>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'離職' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">離職</label>
               </div>
             </td>
           </tr>
           <tr>
             <th>電話</th>
-            <td></td>
+            <td>
+                <input type="text" class="form-control">
+            </td>
             <th>E-mail</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>聯絡住址</th>
-            <td colspan="3"></td>
+            <td colspan="3">
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>部門或單位</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
             <th>職稱</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>方案計畫名稱</th>
-            <td colspan="3"></td>
+            <td colspan="3">
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>所屬團隊</th>
-            <td colspan="3"></td>
+            <td colspan="3">
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
-            <th colspan="4">權限</th>
+            <th colspan="4" class="bg-grap">權限</th>
           </tr>
           <tr>
             <th>角色</th>
             <td colspan="3">
               <div class="d-inline-block">
+                <vuestic-checkbox :label="'組織管理員' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'組織主管' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'部門主管' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'組/科/室主管' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'ISP促進者' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'執行監督者' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'支持者' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'OEES訪員' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'SIS訪員' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'POS訪員' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'服務對象/家屬' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              
+              <!-- <div class="d-inline-block"> -->
                 <!-- <vuestic-checkbox :label="'組織管理員' | translate" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox> -->
-                  <div class="radio abc-radio abc-radio-primary">
+                  <!-- <div class="radio abc-radio abc-radio-primary">
                     <input type="radio" name="radio1" id="radio1" value="option1" checked>
                     <label for="radio1">
                           <span class="abc-label-text">Radio</span>
                     </label>
-                </div>
-              </div>
+                </div> -->
+              <!-- </div> -->
             </td>
           </tr>
           <tr>
             <th>審核</th>
-            <td> </td>
+            <td>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'SIS' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'POS' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'社區生活技能' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'ISP及會議紀錄' | translate" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
+              </div>
+            </td>
             <th>個人收入</th>
-            <td> </td>
+            <td>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">無</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">檢視</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+                <label class="form-check-label" for="inlineRadio3">編輯</label>
+              </div>
+            </td>
           </tr>
         </table>
       </modal>

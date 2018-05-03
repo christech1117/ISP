@@ -10344,6 +10344,10 @@ a.text-pale:focus {
   }
 }
 
+.bg-grap {
+  background-color: #eee;
+}
+
 html {
   min-height: 100%;
 }
