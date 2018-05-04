@@ -1,7 +1,7 @@
 require('./bootstrap');
-// import SideBar from './components/layouts/SideBar';
+// import App from './components/App';
 
 const app = new Vue({
     el: '#app',
-    // components: { SideBar }
+    // components: { App }
 });

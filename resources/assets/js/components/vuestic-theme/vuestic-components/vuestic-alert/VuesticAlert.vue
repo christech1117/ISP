@@ -46,7 +46,7 @@
 </script>
 
 <style lang='scss' scoped>
-  @import '../../../sass/_variables.scss';
+  @import '../../../scss/_variables.scss';
 
   .fade-enter-active, .fade-leave-active {
     transition: opacity .5s

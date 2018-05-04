@@ -23,3 +23,11 @@ Route::get('/member', function () {
 Route::get('/company/basic', function () {
     return view('/company/basic');
 });
+
+Route::get('/company/plan', function () {
+    return view('/company/plan');
+});
+
+Route::get('/company/department', function () {
+    return view('/company/department');
+});

@@ -27,7 +27,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../../sass/_variables.scss";
+  @import "../../../scss/_variables.scss";
 
   .vuestic-switch {
     cursor: pointer;

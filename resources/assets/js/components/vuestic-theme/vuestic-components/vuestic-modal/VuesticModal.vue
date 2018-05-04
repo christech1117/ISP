@@ -63,11 +63,11 @@
       },
       okClass: {
         type: String,
-        default: 'btn btn-primary'
+        default: 'btn btn-warning'
       },
       cancelClass: {
         type: String,
-        default: 'btn btn-secondary'
+        default: 'btn btn-pale'
       },
       okDisabled: {
         type: Boolean,
@@ -141,7 +141,7 @@
 </script>
 
 <style lang="scss">
-  @import "../../../../../sass/_variables.scss";
+  @import "../../../../../scss/_variables.scss";
   @import "~bootstrap/scss/functions";
   @import "~bootstrap/scss/variables";
 
