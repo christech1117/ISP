@@ -124,6 +124,7 @@
           </tr>
         </table>
       </modal>
+      <h5>一、基本資料</h5>
       <table border="1" class="table text-center">
         <tr>
           <th>姓名</th>
@@ -386,6 +387,66 @@
               </li>
             </ul>
           </td>
+        </tr>
+      </table>
+      <h5>二、家庭狀況</h5>
+      <table border="1" class="table text-center">
+        <tr>
+          <th>住所型態</th>
+          <td colspan="6">
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'雅房'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'套房'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'公寓'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'平房'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'透天獨棟'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>住所類型</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>經濟狀況</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th rowspan="3">家庭成員</th>
+          <th>稱謂</th>
+          <th>姓名</th>
+          <th>年齡</th>
+          <th>服務單位/職稱(學校)</th>
+          <th>是否障礙</th>
+          <th>存/歿</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td colspan="6">
+            <span>主要照顧者：____ 主要決策者：＿＿＿</span>
+          </td>
+        </tr>
+        <tr>
+          <th>家系圖暨生態圖</th>
+          <td colspan="6"></td>
         </tr>
       </table>
     </vuestic-widget>
