@@ -126,114 +126,265 @@
       </modal>
       <table border="1" class="table text-center">
         <tr>
-          <th>組織\單位名稱</th>
-          <td colspan="3"></td>
+          <th>姓名</th>
+          <td colspan="2"></td>
+          <th>出生日期</th>
+          <td colspan="2"></td>
+          <td rowspan="3"></td>
         </tr>
         <tr>
-          <th>聯絡人姓名</th>
-          <td> </td>
+          <th>性別</th>
+          <td colspan="2"></td>
+          <th>身分證字號</th>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <th>手冊核發日期</th>
+          <td colspan="2"></td>
+          <th>後續鑑定日期</th>
+          <td colspan="2"></td>
+        </tr>
+        <tr>
+          <th rowspan="10">障礙類別</th>
+        </tr>
+        <tr>
+          <th>第一大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第二大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第三大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第四大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第五大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第六大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第七大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>第八大類</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <td colspan="6">
+            <vuestic-checkbox :label="'多重障礙者'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            <vuestic-checkbox :label="'罕見疾病'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            <span>其他經中央衛生主管機關認定之障礙者(</span>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'先天代謝異常'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'染色體異常'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+              <div class="d-inline-block">
+                <vuestic-checkbox :label="'先天性缺陷'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              </div>
+            <span>)</span>
+          </td>
+        </tr>
+        <tr>
+          <th>障礙等級</th>
+          <td colspan="6">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">輕度</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">中度</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">重度</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">極重度</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>慣用語言</th>
+          <td colspan="6">
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'國語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'臺語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'客家話'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'原住民語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'手語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>婚姻狀況</th>
+          <td colspan="6">
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'未婚'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'已婚'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+            <div class="d-inline-block">
+              <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>戶籍地址</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th>通訊地址</th>
+          <td colspan="6"></td>
+        </tr>
+        <tr>
+          <th rowspan="3">家長監護人</th>
+          <th>姓名</th>
+          <td></td>
+          <th>關係</th>
+          <td></td>
           <th>電話</th>
-          <td> </td>
+          <td></td>
         </tr>
         <tr>
-          <th>Email</th>
-          <td colspan="3"></td>
+          <td colspan="6">通訊地址：</td>
         </tr>
-        <tr colspan="4">
-          <th>服務地區類別</th>
-          <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'都市'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'郊區'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'綜合'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
+        <tr>
+          <td colspan="6">電子信箱：</td>
+        </tr>
+        <tr>
+          <th>身份</th>
+          <td colspan="6">
+            <ul>
+              <li>
+                <span>福利：</span>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'一般戶'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'中低收入戶'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'低收入戶第 款'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+              </li>
+              <li>
+                <span>保險：</span>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'勞保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'公保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'榮保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'福保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'農/漁保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'國保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'健保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+              </li>
+              <li>
+                <span>有無重大傷病卡：</span>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'無'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'有'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+              </li>
+              <li>
+                <span>監護宣告：</span>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'無'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'有'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+              </li>
+            </ul>
           </td>
         </tr>
         <tr>
-          <th>服務人數</th>
-          <td> </td>
-          <th>全職人員數量</th>
-          <td> </td>
-        </tr>
-        <tr>
-          <th>服務對方類型</th>
-          <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'智能/發展障礙'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'高齡'" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'精神/行為健康'" :id="'checkbox3'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'特殊教育'" :id="'checkbox4'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'其他'" :id="'checkbox5'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>服務對象年齡層百分比</th>
-          <td colspan="3">
-            <p>兒童 0 ~ 12 歲：</p>
-            <p>青少年 13 ~ 18 歲：</p>
-            <p>高齡 65+ 歲：</p>
-            <p>成人 19 ~ 65 歲：</p>
-          </td>
-        </tr>
-        <tr>
-          <th>年度預算</th>
-          <td colspan="3"></td>
-        </tr>
-        <tr>
-          <th>組織服務內容</th>
-          <td colspan="3">
-            <ol>
+          <th>個案來源</th>
+          <td colspan="6">
+            <ul>
               <li>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'居住 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'主動發掘'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'大型機構(&gt;200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'衛政'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'小型機構(30人~200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'教育'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'夜間型住宿機構(&lt;29人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'社政'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'社區居住(&lt;6人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'勞政'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'其他____'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
               </li>
               <li>
-                <vuestic-checkbox :label="'日間活動'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-              <li>
+                <span>自行提出申請(訊息來源：</span>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'就業 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'中心文宣'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'庇護性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'社政文宣'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
                 <div class="d-inline-block">
-                  <vuestic-checkbox :label="'支持性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                  <vuestic-checkbox :label="'媒體'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
                 </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'親友'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <div class="d-inline-block">
+                  <vuestic-checkbox :label="'其他____'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                </div>
+                <span>)</span>
               </li>
-              <li>
-                <vuestic-checkbox :label="'教育(學校)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-              <li>
-                <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </li>
-            </ol>
+            </ul>
           </td>
         </tr>
       </table>
