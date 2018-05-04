@@ -9,17 +9,23 @@
         </button>
       </div>
       <modal :show.sync="show" v-bind:large="true" v-bind:force="true" ref="modal" :cancelText="'取消'" :okText="'新增'">
-        <div slot="title">新增人員</div>
+        <div slot="title">編輯組織基本資料</div>
         <table border="1" class="table">
           <tr>
             <th>組織\單位名稱</th>
-            <td colspan="3"></td>
+            <td colspan="3">
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>聯絡人姓名</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
             <th>電話</th>
-            <td> </td>
+            <td>
+              <input type="text" class="form-control">
+            </td>
           </tr>
           <tr>
             <th>Email</th>
@@ -124,20 +130,20 @@
           </tr>
         </table>
       </modal>
-      <table border="1" class="table text-center">
+      <table border="1" class="table text-center" v-for="item in items" :key="item.id">
         <tr>
           <th>組織\單位名稱</th>
-          <td colspan="3"></td>
+          <td colspan="3">{{ item.company_name }}</td>
         </tr>
         <tr>
           <th>聯絡人姓名</th>
-          <td> </td>
+          <td>{{ item.member_id }}</td>
           <th>電話</th>
-          <td> </td>
+          <td>{{ item.tel }}</td>
         </tr>
         <tr>
           <th>Email</th>
-          <td colspan="3"></td>
+          <td colspan="3">{{ item.email }}</td>
         </tr>
         <tr colspan="4">
           <th>服務地區類別</th>
@@ -146,18 +152,18 @@
               <vuestic-checkbox :label="'都市'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
             </div>
             <div class="d-inline-block">
-              <vuestic-checkbox :label="'郊區'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              <vuestic-checkbox :label="'郊區'" :id="'checkbox2'" v-model="checkboxOneModel"></vuestic-checkbox>
             </div>
             <div class="d-inline-block">
-              <vuestic-checkbox :label="'綜合'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+              <vuestic-checkbox :label="'綜合'" :id="'checkbox3'" v-model="checkboxOneModel"></vuestic-checkbox>
             </div>
           </td>
         </tr>
         <tr>
           <th>服務人數</th>
-          <td> </td>
+          <td>{{ item.user_count }}</td>
           <th>全職人員數量</th>
-          <td> </td>
+          <td>{{ item.member_count }}</td>
         </tr>
         <tr>
           <th>服務對方類型</th>
@@ -190,7 +196,7 @@
         </tr>
         <tr>
           <th>年度預算</th>
-          <td colspan="3"></td>
+          <td colspan="3">{{ item.budget }}</td>
         </tr>
         <tr>
           <th>組織服務內容</th>
@@ -252,7 +258,7 @@ export default {
   },
   data() {
     return {
-      members: [],
+      items: [],
       member: {
         id: null,
         name: '',
@@ -274,9 +280,9 @@ export default {
     },
     init() {
       let self = this;
-      axios.get('/api/member')
+      axios.get('/api/company/basic')
            .then(response => {
-              self.members  = response.data;
+              self.items  = response.data;
            })
            .catch(error => {
               console.log(error.response)

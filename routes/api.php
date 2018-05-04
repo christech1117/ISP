@@ -22,3 +22,5 @@ Route::get('/member/{id}', 'MemberController@getMemberById');
 Route::post('/member', 'MemberController@addMember');
 Route::put('/member/{id}', 'MemberController@updateMember');
 Route::delete('/member/{id}', 'MemberController@deleteMember');
+
+Route::get('/company/basic', 'CompanyBasicController@getCompanyBasic');
