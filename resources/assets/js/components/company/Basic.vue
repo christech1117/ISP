@@ -52,23 +52,15 @@
             <td> </td>
           </tr>
           <tr>
-            <th>服務對方類型</th>
+            <th>服務對象類型</th>
             <td colspan="3">
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'智能/發展障礙'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-              </div>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'高齡'" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
-              </div>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'精神/行為健康'" :id="'checkbox3'" v-model="checkboxTwoModel"></vuestic-checkbox>
-              </div>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'特殊教育'" :id="'checkbox4'" v-model="checkboxTwoModel"></vuestic-checkbox>
-              </div>
-              <div class="d-inline-block">
-                <vuestic-checkbox :label="'其他'" :id="'checkbox5'" v-model="checkboxTwoModel"></vuestic-checkbox>
-              </div>
+              <input type="checkbox" id="jack" value="Jack" v-model="service_people">
+              <label for="jack">Jack</label>
+              <input type="checkbox" id="john" value="John" v-model="service_people">
+              <label for="john">John</label>
+              <input type="checkbox" id="mike" value="Mike" v-model="service_people">
+              <label for="mike">Mike</label>
+              {{ service_people }}
             </td>
           </tr>
           <tr>
@@ -148,15 +140,10 @@
         <tr colspan="4">
           <th>服務地區類別</th>
           <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'都市'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'郊區'" :id="'checkbox2'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'綜合'" :id="'checkbox3'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_area">都市</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_area">郊區</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_area">綜合</p-radio>
+            {{ service_area }}
           </td>
         </tr>
         <tr>
@@ -168,21 +155,12 @@
         <tr>
           <th>服務對方類型</th>
           <td colspan="3">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'智能/發展障礙'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'高齡'" :id="'checkbox2'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'精神/行為健康'" :id="'checkbox3'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'特殊教育'" :id="'checkbox4'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'其他'" :id="'checkbox5'" v-model="checkboxTwoModel"></vuestic-checkbox>
-            </div>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_people">智能/發展障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_people">高齡</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_people">精神/行為健康</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="4" v-model="service_people">特殊教育</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="5" v-model="service_people">其他</p-check>
+            {{ service_people }}
           </td>
         </tr>
         <tr>
@@ -203,41 +181,28 @@
           <td colspan="3">
             <ol>
               <li>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'居住 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'大型機構(&gt;200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'小型機構(30人~200人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'夜間型住宿機構(&lt;29人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'社區居住(&lt;6人)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <!-- <span>居住 ➔</span> -->
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="a" v-model="service_content">居住 ➔</p-check>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_content">大型機構(>200人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_content">小型機構(30人~200人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_content">夜間型住宿機構(&lt;29人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="4" v-model="service_content">社區居住(&lt;6人)</p-radio>
+                {{ service_content }}
               </li>
               <li>
-                <vuestic-checkbox :label="'日間活動'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="b" v-model="service_content">日間活動</p-check>
               </li>
               <li>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'就業 ➔'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'庇護性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'支持性就業'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <!-- <span>就業 ➔</span> -->
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="c" v-model="service_content">就業 ➔</p-check>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="6" v-model="service_content">庇護性就業</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="7" v-model="service_content">支持性就業</p-radio>
               </li>
               <li>
-                <vuestic-checkbox :label="'教育(學校)'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="d" v-model="service_content">教育(學校)</p-check>
               </li>
               <li>
-                <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="e" v-model="service_content">其他</p-check>
               </li>
             </ol>
           </td>
@@ -267,8 +232,9 @@ export default {
       titleWarning: false,
       bodyWarning: false,
       isSave: false,
-      checkboxOneModel: false,
-      checkboxTwoModel: false,
+      service_people: [],
+      service_content: [],
+      service_area: []
     }
   },
   methods: {
@@ -280,6 +246,7 @@ export default {
     },
     init() {
       let self = this;
+      const id = 1;
       axios.get('/api/company/basic')
            .then(response => {
               self.items  = response.data;
