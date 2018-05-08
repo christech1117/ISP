@@ -140,9 +140,9 @@
         <tr colspan="4">
           <th>服務地區類別</th>
           <td colspan="3">
-            <p-radio class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_area">都市</p-radio>
-            <p-radio class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_area">郊區</p-radio>
-            <p-radio class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_area">綜合</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="city" v-model="service_area">都市</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="suburbs" v-model="service_area">郊區</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="complex" v-model="service_area">綜合</p-radio>
             {{ service_area }}
           </td>
         </tr>
@@ -153,14 +153,14 @@
           <td>{{ item.member_count }}</td>
         </tr>
         <tr>
-          <th>服務對方類型</th>
+          <th>服務對象類型</th>
           <td colspan="3">
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_people">智能/發展障礙</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_people">高齡</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_people">精神/行為健康</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="4" v-model="service_people">特殊教育</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="5" v-model="service_people">其他</p-check>
-            {{ service_people }}
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="obstacles" v-model="service_people">智能/發展障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="old" v-model="service_people">高齡</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="spirit" v-model="service_people">精神/行為健康</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">特殊教育</p-check>
+              其他<input class="v-form-group" required/>
+              {{ service_people }}
           </td>
         </tr>
         <tr>
@@ -181,28 +181,29 @@
           <td colspan="3">
             <ol>
               <li>
-                <!-- <span>居住 ➔</span> -->
-                <p-check class="p-default p-smooth p-bigger" color="warning" value="a" v-model="service_content">居住 ➔</p-check>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="1" v-model="service_content">大型機構(>200人)</p-radio>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="2" v-model="service_content">小型機構(30人~200人)</p-radio>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="3" v-model="service_content">夜間型住宿機構(&lt;29人)</p-radio>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="4" v-model="service_content">社區居住(&lt;6人)</p-radio>
-                {{ service_content }}
+                <span>居住 ➔</span>
+                <!-- <p-check class="p-default p-smooth p-bigger" color="warning" value="a" v-model="service_content">居住 ➔</p-check> -->
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="large" v-model="live">大型機構(>200人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="small" v-model="live">小型機構(30人~200人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="night" v-model="live">夜間型住宿機構(&lt;29人)</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="community" v-model="live">社區居住(&lt;6人)</p-radio>
+                {{ service_content_live }}
               </li>
               <li>
-                <p-check class="p-default p-smooth p-bigger" color="warning" value="b" v-model="service_content">日間活動</p-check>
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="daytime" v-model="daytime">日間活動</p-check>
               </li>
               <li>
-                <!-- <span>就業 ➔</span> -->
-                <p-check class="p-default p-smooth p-bigger" color="warning" value="c" v-model="service_content">就業 ➔</p-check>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="6" v-model="service_content">庇護性就業</p-radio>
-                <p-radio class="p-default p-smooth p-bigger" color="warning" value="7" v-model="service_content">支持性就業</p-radio>
+                <span>就業 ➔</span>
+                <!-- <p-check class="p-default p-smooth p-bigger" color="warning" value="c" v-model="service_content">就業 ➔</p-check> -->
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="Sheltered" v-model="job">庇護性就業</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="Supportive" v-model="job">支持性就業</p-radio>
+                {{ service_content_job }}
               </li>
               <li>
-                <p-check class="p-default p-smooth p-bigger" color="warning" value="d" v-model="service_content">教育(學校)</p-check>
+                <p-check class="p-default p-smooth p-bigger" color="warning" value="education" v-model="education">教育(學校)</p-check>
               </li>
               <li>
-                <p-check class="p-default p-smooth p-bigger" color="warning" value="e" v-model="service_content">其他</p-check>
+                <span>其他</span>
               </li>
             </ol>
           </td>
@@ -233,7 +234,10 @@ export default {
       bodyWarning: false,
       isSave: false,
       service_people: [],
-      service_content: [],
+      live: [], // 居住
+      daytime: false, // 日間活動
+      job: [], // 就業
+      education: false, // 教育
       service_area: []
     }
   },

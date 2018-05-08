@@ -11747,6 +11747,19 @@ fieldset {
   margin-bottom: 1rem;
 }
 
+.v-form-group {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  width: 7rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  -webkit-transition: all 0.28s ease;
+  transition: all 0.28s ease;
+  vertical-align: top;
+}
+
 .form-group input,
 .form-group textarea.chat {
   height: 1.9rem;
@@ -11772,7 +11785,6 @@ fieldset {
   position: absolute;
   top: 0.25rem;
   left: 0;
-  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

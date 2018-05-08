@@ -14,7 +14,7 @@ class CreateCompanyBasicsTable extends Migration
     public function up()
     {
         Schema::create('company_basics', function (Blueprint $table) {
-            $table->increments('compony_id');
+            $table->increments('compony_id')->comment('組織基本資料，組織服務內容為一對多，所以另開一個table');
             $table->string('company_name')->unique()->comment('組織\單位名稱');
             $table->string('member_id')->unique()->comment('聯絡人姓名');
             $table->string('tel')->unique()->comment('電話');
