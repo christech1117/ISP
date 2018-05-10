@@ -46,16 +46,16 @@ fieldset {
   border: none;
 }
 
-.form-group {
+.v-form-group {
   position: relative;
-  display: flex;
-  flex-direction: row;
+  // display: flex;
+  // flex-direction: row;
   min-height: $mf-min-height;
   margin-top: ($mf-font-size * 0.2);
   margin-bottom: ($mf-gap * 1.5);
 
   .input-group {
-    align-self: flex-end;
+    // align-self: flex-end;
   }
 
   .input-icon {
@@ -188,18 +188,6 @@ fieldset {
 }
 
 .v-form-group {
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid black;
-  width: 7rem;
-  font-size: $mf-font-size;
-  line-height: 1.9;
-  transition: all $mf-transition-speed ease;
-  vertical-align: top;
-}
-
-.form-group {
   // scss-lint:disable QualifyingElement, NestingDepth
   input, textarea.chat {
     height: ($mf-font-size * 1.9);

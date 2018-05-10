@@ -11591,136 +11591,124 @@ fieldset {
   border: none;
 }
 
-.form-group {
+.v-form-group {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   min-height: 2.25rem;
   margin-top: 0.2rem;
   margin-bottom: 2.25rem;
 }
 
-.form-group .input-group {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-.form-group .input-icon {
+.v-form-group .input-icon {
   position: absolute;
   top: 0.4375rem;
   color: #b3b2b2;
 }
 
-.form-group .text-secondary {
+.v-form-group .text-secondary {
   color: #b3b2b2 !important;
 }
 
-.form-group a.text-secondary:hover,
-.form-group a.text-secondary:focus {
+.v-form-group a.text-secondary:hover,
+.v-form-group a.text-secondary:focus {
   color: #999999 !important;
 }
 
-.form-group .input-group {
+.v-form-group .input-group {
   position: relative;
   display: block;
 }
 
-.form-group.select-form-group .dropdown-toggle::after {
+.v-form-group.select-form-group .dropdown-toggle::after {
   display: none;
 }
 
-.form-group.select-form-group .dropdown-menu {
+.v-form-group.select-form-group .dropdown-menu {
   width: 100%;
 }
 
-.form-group.select-form-group .dropdown-item {
+.v-form-group.select-form-group .dropdown-item {
   cursor: pointer;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.form-group.select-form-group .dropdown-item .selected-icon {
+.v-form-group.select-form-group .dropdown-item .selected-icon {
   display: none;
   margin-left: 0.35rem;
 }
 
-.form-group.select-form-group .dropdown-item.selected {
+.v-form-group.select-form-group .dropdown-item.selected {
   color: #f7c980;
 }
 
-.form-group.select-form-group .dropdown-item.selected .selected-icon {
+.v-form-group.select-form-group .dropdown-item.selected .selected-icon {
   display: inline-block;
 }
 
-.form-group.select-form-group .input-icon {
+.v-form-group.select-form-group .input-icon {
   color: #807f7f;
   font-size: 0.8rem;
   top: 1rem;
 }
 
-.form-group.select-form-group .bar::before {
+.v-form-group.select-form-group .bar::before {
   display: none;
 }
 
-.form-group.form-group-w-btn .btn {
+.v-form-group.form-group-w-btn .btn {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-.form-group.with-icon-right input {
+.v-form-group.with-icon-right input {
   padding-right: 1.375rem;
 }
 
-.form-group.with-icon-right .icon-right {
+.v-form-group.with-icon-right .icon-right {
   right: 0;
 }
 
-.form-group.with-icon-left input,
-.form-group.with-icon-left textarea {
+.v-form-group.with-icon-left input,
+.v-form-group.with-icon-left textarea {
   padding-left: 1.375rem;
 }
 
-.form-group.with-icon-left input ~ .control-label,
-.form-group.with-icon-left textarea ~ .control-label {
+.v-form-group.with-icon-left input ~ .control-label,
+.v-form-group.with-icon-left textarea ~ .control-label {
   padding-left: 1.375rem;
 }
 
-.form-group.with-icon-left select,
-.form-group.with-icon-left input:focus,
-.form-group.with-icon-left input:valid,
-.form-group.with-icon-left input.form-file,
-.form-group.with-icon-left input.has-value,
-.form-group.with-icon-left textarea:focus,
-.form-group.with-icon-left textarea:valid,
-.form-group.with-icon-left textarea.form-file,
-.form-group.with-icon-left textarea.has-value {
+.v-form-group.with-icon-left select,
+.v-form-group.with-icon-left input:focus,
+.v-form-group.with-icon-left input:valid,
+.v-form-group.with-icon-left input.form-file,
+.v-form-group.with-icon-left input.has-value,
+.v-form-group.with-icon-left textarea:focus,
+.v-form-group.with-icon-left textarea:valid,
+.v-form-group.with-icon-left textarea.form-file,
+.v-form-group.with-icon-left textarea.has-value {
   color: #34495e;
 }
 
-.form-group.with-icon-left select ~ .control-label,
-.form-group.with-icon-left input:focus ~ .control-label,
-.form-group.with-icon-left input:valid ~ .control-label,
-.form-group.with-icon-left input.form-file ~ .control-label,
-.form-group.with-icon-left input.has-value ~ .control-label,
-.form-group.with-icon-left textarea:focus ~ .control-label,
-.form-group.with-icon-left textarea:valid ~ .control-label,
-.form-group.with-icon-left textarea.form-file ~ .control-label,
-.form-group.with-icon-left textarea.has-value ~ .control-label {
+.v-form-group.with-icon-left select ~ .control-label,
+.v-form-group.with-icon-left input:focus ~ .control-label,
+.v-form-group.with-icon-left input:valid ~ .control-label,
+.v-form-group.with-icon-left input.form-file ~ .control-label,
+.v-form-group.with-icon-left input.has-value ~ .control-label,
+.v-form-group.with-icon-left textarea:focus ~ .control-label,
+.v-form-group.with-icon-left textarea:valid ~ .control-label,
+.v-form-group.with-icon-left textarea.form-file ~ .control-label,
+.v-form-group.with-icon-left textarea.has-value ~ .control-label {
   padding-left: 0;
 }
 
-.form-group.with-icon-left .icon-left {
+.v-form-group.with-icon-left .icon-left {
   left: 0;
 }
 
-.form-group .error-icon,
-.form-group .valid-icon {
+.v-form-group .error-icon,
+.v-form-group .valid-icon {
   display: none;
 }
 
@@ -11747,29 +11735,16 @@ fieldset {
   margin-bottom: 1rem;
 }
 
-.v-form-group {
-  border: 0;
-  outline: 0;
-  background: transparent;
-  border-bottom: 1px solid black;
-  width: 7rem;
-  font-size: 1rem;
-  line-height: 1.9;
-  -webkit-transition: all 0.28s ease;
-  transition: all 0.28s ease;
-  vertical-align: top;
-}
-
-.form-group input,
-.form-group textarea.chat {
+.v-form-group input,
+.v-form-group textarea.chat {
   height: 1.9rem;
 }
 
-.form-group textarea {
+.v-form-group textarea {
   resize: none;
 }
 
-.form-group select {
+.v-form-group select {
   width: 100%;
   font-size: 1rem;
   height: 1.6rem;
@@ -11781,7 +11756,7 @@ fieldset {
           box-shadow: none;
 }
 
-.form-group .control-label {
+.v-form-group .control-label {
   position: absolute;
   top: 0.25rem;
   left: 0;
@@ -11798,13 +11773,13 @@ fieldset {
   transition: all 0.28s ease;
 }
 
-.form-group .bar {
+.v-form-group .bar {
   position: relative;
   border-bottom: 0.0625rem solid #999;
   display: block;
 }
 
-.form-group .bar::before {
+.v-form-group .bar::before {
   content: '';
   height: 0.125rem;
   width: 0;
@@ -11817,8 +11792,8 @@ fieldset {
   z-index: 2;
 }
 
-.form-group input,
-.form-group textarea {
+.v-form-group input,
+.v-form-group textarea {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -11834,37 +11809,37 @@ fieldset {
           box-shadow: none;
 }
 
-.form-group input[type="file"] {
+.v-form-group input[type="file"] {
   line-height: 1;
 }
 
-.form-group input[type="file"] ~ .bar {
+.v-form-group input[type="file"] ~ .bar {
   display: none;
 }
 
-.form-group.show input,
-.form-group select,
-.form-group input:focus,
-.form-group input:valid,
-.form-group input.form-file,
-.form-group input.has-value,
-.form-group textarea:focus,
-.form-group textarea:valid,
-.form-group textarea.form-file,
-.form-group textarea.has-value {
+.v-form-group.show input,
+.v-form-group select,
+.v-form-group input:focus,
+.v-form-group input:valid,
+.v-form-group input.form-file,
+.v-form-group input.has-value,
+.v-form-group textarea:focus,
+.v-form-group textarea:valid,
+.v-form-group textarea.form-file,
+.v-form-group textarea.has-value {
   color: #34495e;
 }
 
-.form-group.show input ~ .control-label,
-.form-group select ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group input:valid ~ .control-label,
-.form-group input.form-file ~ .control-label,
-.form-group input.has-value ~ .control-label,
-.form-group textarea:focus ~ .control-label,
-.form-group textarea:valid ~ .control-label,
-.form-group textarea.form-file ~ .control-label,
-.form-group textarea.has-value ~ .control-label {
+.v-form-group.show input ~ .control-label,
+.v-form-group select ~ .control-label,
+.v-form-group input:focus ~ .control-label,
+.v-form-group input:valid ~ .control-label,
+.v-form-group input.form-file ~ .control-label,
+.v-form-group input.has-value ~ .control-label,
+.v-form-group textarea:focus ~ .control-label,
+.v-form-group textarea:valid ~ .control-label,
+.v-form-group textarea.form-file ~ .control-label,
+.v-form-group textarea.has-value ~ .control-label {
   font-size: 0.6rem;
   color: #f7c980;
   font-weight: 600;
@@ -11873,21 +11848,21 @@ fieldset {
   left: 0;
 }
 
-.form-group select:focus,
-.form-group input:focus,
-.form-group textarea:focus {
+.v-form-group select:focus,
+.v-form-group input:focus,
+.v-form-group textarea:focus {
   outline: none;
 }
 
-.form-group select:focus ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group textarea:focus ~ .control-label {
+.v-form-group select:focus ~ .control-label,
+.v-form-group input:focus ~ .control-label,
+.v-form-group textarea:focus ~ .control-label {
   color: #f7c980;
 }
 
-.form-group select:focus ~ .bar::before,
-.form-group input:focus ~ .bar::before,
-.form-group textarea:focus ~ .bar::before {
+.v-form-group select:focus ~ .bar::before,
+.v-form-group input:focus ~ .bar::before,
+.v-form-group textarea:focus ~ .bar::before {
   width: 100%;
   left: 0;
 }
