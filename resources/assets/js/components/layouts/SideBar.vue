@@ -85,7 +85,7 @@ export default {
           "expanded": false,
           "children": [
             {
-              "path": "/person/basic",
+              "path": "/person/personbasic",
               "title": "基本資料"
             },
             {
@@ -93,15 +93,15 @@ export default {
               "title": "支持強度強表(SIS)"
             },
             {
-              "path": "/person/mysupport_plan",
+              "path": "/person/mysupportplan",
               "title": "我的支持計畫"
             },
             {
-              "path": "/person/support_plan",
+              "path": "/person/supportplan",
               "title": "個別化支持計畫"
             },
             {
-              "path": "/person/metting_record",
+              "path": "/person/mettingrecord",
               "title": "ISP會議記錄"
             },
             {
@@ -109,7 +109,7 @@ export default {
               "title": "個人成果量表(POS)"
             },
             {
-              "path": "/person/community_skill",
+              "path": "/person/communityskill",
               "title": "社區生活技能評量表"
             },
             {

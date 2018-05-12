@@ -20,6 +20,7 @@ Route::get('/member', function () {
     return view('member');
 });
 
+# 組織管理
 Route::get('/company/basic', function () {
     return view('/company/basic');
 });
@@ -30,4 +31,9 @@ Route::get('/company/plan', function () {
 
 Route::get('/company/department', function () {
     return view('/company/department');
+});
+
+# 個人層級
+Route::get('/person/personbasic', function () {
+    return view('/person/personbasic');
 });

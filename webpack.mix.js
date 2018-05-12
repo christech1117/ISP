@@ -23,6 +23,8 @@ mix.js('resources/assets/js/fontawesome-all.js', 'public/js')
    .js('resources/assets/js/company/basic.js', 'public/js')
    .js('resources/assets/js/company/department.js', 'public/js')
    .js('resources/assets/js/company/plan.js', 'public/js')
+   // person
+   .js('resources/assets/js/person/personBasic.js', 'public/js')
 
    .extract(['lodash', 'jquery', 'axios', 'vue'])
    .sass('resources/assets/scss/app.scss', 'public/css');
