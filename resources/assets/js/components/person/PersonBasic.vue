@@ -150,7 +150,13 @@
         </tr>
         <tr>
           <th>第一大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="obstacles" v-model="service_people">智能/發展障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="old" v-model="service_people">高齡</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="spirit" v-model="service_people">精神/行為健康</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">特殊教育</p-check>
+            其他<input class="v-form-group" required/>
+          </td>
         </tr>
         <tr>
           <th>第二大類</th>
