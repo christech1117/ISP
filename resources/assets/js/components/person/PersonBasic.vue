@@ -151,43 +151,75 @@
         <tr>
           <th>第一大類</th>
           <td colspan="6">
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="obstacles" v-model="service_people">智能/發展障礙</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="old" v-model="service_people">高齡</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="spirit" v-model="service_people">精神/行為健康</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">特殊教育</p-check>
-            其他<input class="v-form-group" required/>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="obstacles" v-model="service_people">智能障礙者</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="old" v-model="service_people">植物人</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="spirit" v-model="service_people">失智症</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">自閉症</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">慢性精神病</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">頑性癲癇症</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
           </td>
         </tr>
         <tr>
           <th>第二大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">視覺障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">聽覺障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">平衡機能障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
+          </td>
         </tr>
         <tr>
           <th>第三大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">聲音或語言機能障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
+          </td>
         </tr>
         <tr>
           <th>第四大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-心臟</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-造血機能</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-呼吸器官</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
+          </td>
         </tr>
         <tr>
           <th>第五大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-吞嚥機能</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-胃</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-肝臟</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
+          </td>
         </tr>
         <tr>
           <th>第六大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-腎臟</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">重要器官失去功能-膀胱</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>
+          </td>
         </tr>
         <tr>
           <th>第七大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">肢體障礙</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>            
+          </td>
         </tr>
         <tr>
           <th>第八大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">顏面損傷</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">其他</p-check>    
+          </td>
         </tr>
         <tr>
           <td colspan="6">
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">多重障礙者</p-check>
+            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">罕見疾病</p-check>
             <vuestic-checkbox :label="'多重障礙者'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
             <vuestic-checkbox :label="'罕見疾病'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
             <span>其他經中央衛生主管機關認定之障礙者(</span>
@@ -471,11 +503,7 @@ export default {
   data() {
     return {
       members: [],
-      member: {
-        id: null,
-        name: '',
-        phone: ''
-      },
+      obstacles: [],
       titleWarning: false,
       bodyWarning: false,
       isSave: false,
@@ -492,9 +520,19 @@ export default {
     },
     init() {
       let self = this;
-      axios.get('/api/member')
+      // 取得個案基本資料
+      // axios.get('/api/Member')
+      //      .then(response => {
+      //         self.members  = response.data;
+      //      })
+      //      .catch(error => {
+      //         console.log(error.response)
+      //      });
+      // 取得障礙類別
+      axios.get('/api/PersonObstacleType')
            .then(response => {
-              self.members  = response.data;
+              self.obstacles  = response.data;
+              console.log(self.obstacles);
            })
            .catch(error => {
               console.log(error.response)

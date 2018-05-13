@@ -17,10 +17,15 @@ use Illuminate\Http\Request;
 //     return $request->user();
 // });
 
+# 人員管理
 Route::get('/member', 'MemberController@getMemberList');
 Route::get('/member/{id}', 'MemberController@getMemberById');
 Route::post('/member', 'MemberController@addMember');
 Route::put('/member/{id}', 'MemberController@updateMember');
 Route::delete('/member/{id}', 'MemberController@deleteMember');
 
+# 組織管理
 Route::get('/company/basic', 'CompanyBasicController@getCompanyBasic');
+
+# 個人層級
+Route::get('/person/personbasic', 'PersonObstacleTypeController@getObstacleType');
