@@ -28,4 +28,6 @@ Route::delete('/member/{id}', 'MemberController@deleteMember');
 Route::get('/company/basic', 'CompanyBasicController@getCompanyBasic');
 
 # 個人層級
-Route::get('/person/personbasic', 'PersonObstacleTypeController@getObstacleType');
+Route::get('/person/PersonObstacleType', 'PersonObstacleTypeController@getObstacleType');
+Route::get('/person/PersonCustomLanguage', 'PersonCustomLanguageController@index');
+Route::get('/person/PersonInsurance', 'PersonInsuranceController@index');

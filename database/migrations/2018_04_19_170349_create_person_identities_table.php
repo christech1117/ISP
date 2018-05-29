@@ -14,7 +14,7 @@ class CreatePersonIdentitiesTable extends Migration
     public function up()
     {
         Schema::create('person_identities', function (Blueprint $table) {
-            $table->increments('identity_id');
+            $table->increments('identity_id')->comment('病人編號');
             $table->integer('user_id')->nullable()->comment('病人編號');
             $table->enum('welfare', ['general', 'low_middle', 'low'])->default('general')->comment('福利');
             $table->string('low_memo')->nullable()->comment('低收入戶第幾款');
