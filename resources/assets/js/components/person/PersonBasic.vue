@@ -151,46 +151,137 @@
         <tr>
           <th>第一大類</th>
           <td colspan="6">
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="obstacles" v-model="service_people">智能/發展障礙</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="old" v-model="service_people">高齡</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="spirit" v-model="service_people">精神/行為健康</p-check>
-            <p-check class="p-default p-smooth p-bigger" color="warning" value="Special" v-model="service_people">特殊教育</p-check>
-            其他<input class="v-form-group" required/>
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '1'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
+        </tr>
+
+        <tr>
+          <th>第二大類</th>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '2'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
           </td>
         </tr>
         <tr>
-          <th>第二大類</th>
-          <td colspan="6"></td>
-        </tr>
-        <tr>
           <th>第三大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '3'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <th>第四大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '4'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <th>第五大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '5'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <th>第六大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '6'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <th>第七大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '7'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <th>第八大類</th>
-          <td colspan="6"></td>
+          <td colspan="6">
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '8'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+          </td>
         </tr>
         <tr>
           <td colspan="6">
-            <vuestic-checkbox :label="'多重障礙者'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            <vuestic-checkbox :label="'罕見疾病'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            <span>其他經中央衛生主管機關認定之障礙者(</span>
+            <p-check
+              v-for="obstacle in obstacles"
+              :key="obstacle.id"
+              v-if="obstacle.type === '0'"
+              class="p-default p-smooth p-bigger"
+              color="warning" value="obstacles"
+              v-model="service_people"
+            >
+              {{ obstacle.sub_type }}
+            </p-check>
+            <!-- <span>其他經中央衛生主管機關認定之障礙者(</span>
               <div class="d-inline-block">
                 <vuestic-checkbox :label="'先天代謝異常'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
               </div>
@@ -200,65 +291,40 @@
               <div class="d-inline-block">
                 <vuestic-checkbox :label="'先天性缺陷'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
               </div>
-            <span>)</span>
+            <span>)</span> -->
           </td>
         </tr>
         <tr>
           <th>障礙等級</th>
           <td colspan="6">
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label" for="inlineRadio1">輕度</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">中度</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">重度</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-              <label class="form-check-label" for="inlineRadio2">極重度</label>
-            </div>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="low" v-model="obstacle_level">輕度</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="medium" v-model="obstacle_level">中度</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="severe" v-model="obstacle_level">重度</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="vary_severe" v-model="obstacle_level">極重度</p-radio>
           </td>
         </tr>
         <tr>
           <th>慣用語言</th>
           <td colspan="6">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'國語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'臺語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'客家話'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'原住民語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'手語'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
+            <p-check
+              v-for="custom_language in custom_languages"
+              :key="custom_language.id"
+              class="p-default p-smooth p-bigger"
+              color="warning"
+              :value="custom_language.custom_id"
+              v-model="custom_languages_check"
+            >
+              {{ custom_language.title }}
+            </p-check>
+              {{ custom_languages_check }}
           </td>
         </tr>
         <tr>
           <th>婚姻狀況</th>
           <td colspan="6">
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'未婚'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'已婚'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
-            <div class="d-inline-block">
-              <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-            </div>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="unmarried" v-model="marriage">未婚</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="married" v-model="marriage">已婚</p-radio>
+            <p-radio class="p-default p-smooth p-bigger" color="warning" value="other" v-model="marriage">其他</p-radio>
           </td>
         </tr>
         <tr>
@@ -290,67 +356,39 @@
             <ul>
               <li>
                 <span>福利：</span>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'一般戶'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'中低收入戶'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'低收入戶第 款'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="general" v-model="welfare">一般戶</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="low_middle" v-model="welfare">中低收入戶</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="low" v-model="welfare">低收入戶第 款</p-radio>
               </li>
               <li>
                 <span>保險：</span>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'勞保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'公保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'榮保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'福保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'農/漁保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'國保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'健保'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'其他'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <p-check
+                  v-for="insurance in insurances"
+                  :key="insurance.id"
+                  class="p-default p-smooth p-bigger"
+                  color="warning"
+                  :value="insurance.insurance_id"
+                  v-model="service_people"
+                >
+                  {{ insurance.type }}
+                </p-check>
               </li>
               <li>
                 <span>有無重大傷病卡：</span>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'無'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'有'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="no" v-model="sick_card">無</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="yes" v-model="sick_card">有</p-radio>
               </li>
               <li>
                 <span>監護宣告：</span>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'無'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
-                <div class="d-inline-block">
-                  <vuestic-checkbox :label="'有'" :id="'checkbox1'" v-model="checkboxOneModel"></vuestic-checkbox>
-                </div>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="no" v-model="guardian_declaration">無</p-radio>
+                <p-radio class="p-default p-smooth p-bigger" color="warning" value="yes" v-model="guardian_declaration">有</p-radio>
               </li>
             </ul>
           </td>
         </tr>
         <tr>
           <th>個案來源</th>
-          <td colspan="6">
+          <!-- <td colspan="6">
             <ul>
               <li>
                 <div class="d-inline-block">
@@ -392,10 +430,11 @@
                 <span>)</span>
               </li>
             </ul>
-          </td>
+          </td> -->
         </tr>
       </table>
-      <h5>二、家庭狀況</h5>
+      <br />
+      <!-- <h5>二、家庭狀況</h5>
       <table border="1" class="table text-center">
         <tr>
           <th>住所型態</th>
@@ -454,33 +493,38 @@
           <th>家系圖暨生態圖</th>
           <td colspan="6"></td>
         </tr>
-      </table>
+      </table> -->
     </vuestic-widget>
   </div>
 </template>
 <script>
 import Modal from '../vuestic-theme/vuestic-components/vuestic-modal/VuesticModal'
 import VuesticWidget from '../vuestic-theme/vuestic-components/vuestic-widget/VuesticWidget'
-import VuesticCheckbox from '../vuestic-theme/vuestic-components/vuestic-checkbox/VuesticCheckbox'
 
 export default {
   name: 'modals',
   components: {
-    Modal, VuesticWidget, VuesticCheckbox
+    Modal, VuesticWidget
   },
   data() {
     return {
       members: [],
-      member: {
-        id: null,
-        name: '',
-        phone: ''
-      },
+      obstacles: [], // 障礙類別
+      custom_languages: [], // 慣用語言
+      insurances: [], // 保險類型
+
+      marriage: [], // 婚姻狀況
+      welfare: [], // 福利
+
+      custom_languages_check: [],
+
+      sick_card: [], // 有無重大傷病卡
+      guardian_declaration: [], // 監護宣告
+
+      obstacle_level: [],
       titleWarning: false,
       bodyWarning: false,
       isSave: false,
-      checkboxOneModel: false,
-      checkboxTwoModel: false,
     }
   },
   methods: {
@@ -492,9 +536,38 @@ export default {
     },
     init() {
       let self = this;
-      axios.get('/api/member')
+      // 取得個案基本資料
+      // axios.get('/api/Member')
+      //      .then(response => {
+      //         self.members  = response.data;
+      //      })
+      //      .catch(error => {
+      //         console.log(error.response)
+      //      });
+
+      // 取得障礙類別
+      axios.get('/api/person/PersonObstacleType')
            .then(response => {
-              self.members  = response.data;
+              self.obstacles  = response.data;
+              console.log(self.obstacles);
+           })
+           .catch(error => {
+              console.log(error.response)
+           });
+      // 取得慣用語言
+      axios.get('/api/person/PersonCustomLanguage')
+           .then(response => {
+              self.custom_languages = response.data;
+              console.log(self.obstacles);
+           })
+           .catch(error => {
+              console.log(error.response)
+           });
+      // 取得保險類型
+      axios.get('/api/person/PersonInsurance')
+           .then(response => {
+              self.insurances = response.data;
+              console.log(self.obstacles);
            })
            .catch(error => {
               console.log(error.response)

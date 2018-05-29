@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePersonObstaclesTypeTable extends Migration
+class CreatePersonObstacleTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreatePersonObstaclesTypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('person_obstacles_type', function (Blueprint $table) {
-            $table->increments('obstacletype_id');
+        Schema::create('person_obstacle_types', function (Blueprint $table) {
+            $table->increments('obstacletype_id')->comment('障礙類別');
             $table->string('type')->comment('大項');
             $table->string('sub_type')->comment('細項');
             $table->integer('score')->comment('分數');
@@ -29,6 +29,6 @@ class CreatePersonObstaclesTypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('person_obstacles_type');
+        Schema::dropIfExists('person_obstacle_types');
     }
 }
